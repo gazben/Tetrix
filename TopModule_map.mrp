@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sun Nov 02 17:51:47 2014
+Mapped Date    : Sun Nov 02 18:38:33 2014
 
 Design Summary
 --------------
@@ -35,7 +35,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    13 out of   1,430    1%
+  Number of occupied Slices:                    14 out of   1,430    1%
   Number of MUXCYs used:                        24 out of   2,860    1%
   Number of LUT Flip Flop pairs used:           44
     Number with an unused Flip Flop:            25 out of      44   56%
@@ -52,8 +52,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         9 out of     102    8%
-    Number of LOCed IOBs:                        9 out of       9  100%
+  Number of bonded IOBs:                        10 out of     102    9%
+    Number of LOCed IOBs:                        9 out of      10   90%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -83,7 +83,7 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                2.17
 
 Peak Memory Usage:  401 MB
-Total REAL time to MAP completion:  7 secs 
+Total REAL time to MAP completion:  17 secs 
 Total CPU time to MAP completion:   7 secs 
 
 Table of Contents
@@ -120,6 +120,9 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 10 IOs, 9 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -153,6 +156,7 @@ Section 6 - IOB Properties
 | aio<11>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | aio<12>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | clk_in                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rst                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

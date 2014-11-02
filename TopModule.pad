@@ -1,7 +1,7 @@
 Release 14.6 - par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Nov 02 17:52:03 2014
+Sun Nov 02 18:39:00 2014
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -162,7 +162,7 @@ P140|aio<7>|IOB|IO_L3P_0|OUTPUT|LVCMOS25*|0|12|SLOW||||LOCATED|NO|NONE|
 P141|aio<6>|IOB|IO_L2N_0|OUTPUT|LVCMOS25*|0|12|SLOW||||LOCATED|NO|NONE|
 P142|aio<5>|IOB|IO_L2P_0|OUTPUT|LVCMOS25*|0|12|SLOW||||LOCATED|NO|NONE|
 P143||IOBS|IO_L1N_VREF_0|UNUSED||0|||||||||
-P144||IOBM|IO_L1P_HSWAPEN_0|UNUSED||0|||||||||
+P144|rst|IOB|IO_L1P_HSWAPEN_0|INPUT|LVCMOS25*|0||||NONE||UNLOCATED|NO|NONE|
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 
