@@ -1,0 +1,2 @@
+verilog work "RenderModule.v"
+verilog work "src/TopModule.v"

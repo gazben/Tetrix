@@ -1,25 +1,23 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    23:43:38 11/01/2014 
-// Design Name: 
-// Module Name:    TopModule 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Company: SmileWakers Inc.
+// Engineer: Gazben
 //
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+// Module Name:    RenderModule 
+// Project Name:   Tetrix
 //////////////////////////////////////////////////////////////////////////////////
-module TopModule(
-    );
 
+module TopModule(
+    input clk50M,
+    //input rst,
+  
+    output [7:0] aio
+  );
+
+  RenderModule(
+    .clk( clk50M ),
+    .VGA_out( aio )
+  );
+ 
 
 endmodule

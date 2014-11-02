@@ -21,8 +21,89 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Tetrix.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RenderModule.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RenderModule.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RenderModule.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="TopModule.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TopModule.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TopModule.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="TopModule.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="TopModule.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TopModule.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="TopModule.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="TopModule.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TopModule.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TopModule_envsettings.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TopModule_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TopModule_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TopModule_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1414942216" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1414942216">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414942216" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-317488495780359314" xil_pn:start_ts="1414942216">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414942971" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6661496888668895293" xil_pn:start_ts="1414942971">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414942216" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1414942216">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414942216" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5921492853799635536" xil_pn:start_ts="1414942216">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414942216" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="250970745955965653" xil_pn:start_ts="1414942216">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414942971" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8604715003745719623" xil_pn:start_ts="1414942971">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414943987" xil_pn:in_ck="9212074282846956094" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="939649983007096876" xil_pn:start_ts="1414943979">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TopModule.lso"/>
+      <outfile xil_pn:name="TopModule.ngc"/>
+      <outfile xil_pn:name="TopModule.ngr"/>
+      <outfile xil_pn:name="TopModule.prj"/>
+      <outfile xil_pn:name="TopModule.stx"/>
+      <outfile xil_pn:name="TopModule.syr"/>
+      <outfile xil_pn:name="TopModule.xst"/>
+      <outfile xil_pn:name="TopModule_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1414941587" xil_pn:in_ck="-1227076133715091101" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8119232001201820069" xil_pn:start_ts="1414941587">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414943993" xil_pn:in_ck="8643172293382689410" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8469334073033079298" xil_pn:start_ts="1414943987">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TopModule.bld"/>
+      <outfile xil_pn:name="TopModule_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+  </transforms>
 
 </generated_project>

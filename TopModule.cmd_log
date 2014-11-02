@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc src/logsys_sp6_board.ucf -p xc6slx9-tqg144-3 TopModule.ngc TopModule.ngd  
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc src/logsys_sp6_board.ucf -p xc6slx9-tqg144-2 TopModule.ngc TopModule.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc src/logsys_sp6_board.ucf -p xc6slx9-tqg144-2 TopModule.ngc TopModule.ngd  
+xst -intstyle ise -ifn "F:/Prog_Projectek/Tetrix/TopModule.xst" -ofn "F:/Prog_Projectek/Tetrix/TopModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc src/logsys_sp6_board.ucf -p xc6slx9-tqg144-2 TopModule.ngc TopModule.ngd  
