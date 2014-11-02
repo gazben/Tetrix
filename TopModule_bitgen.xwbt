@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=F:\Prog_Projectek\Tetrix\TopModule.ncd
-OUTFILE=F:\Prog_Projectek\Tetrix\TopModule.bit
+INFILE=C:\Users\netpok\Desktop\Tetrix\TopModule.ncd
+OUTFILE=C:\Users\netpok\Desktop\Tetrix\TopModule.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=F:\Prog_Projectek\Tetrix
+WORKINGDIR=C:\Users\netpok\Desktop\Tetrix
 LICENSE=WebPack
 USER_INFO=174212716_1777490381_0_560

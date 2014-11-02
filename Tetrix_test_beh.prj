@@ -1,4 +1,4 @@
 verilog work "RenderModule.v"
 verilog work "src/TopModule.v"
 verilog work "Tetrix_test.v"
-verilog work "F:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"
+verilog work "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

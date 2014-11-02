@@ -23,17 +23,17 @@ module RenderModule(
   //Pixel freq: 50.0 Mhz
   //Vertical refresh: 48.076923076923 kHz
   
-  reg [9:0] CounterX; //counter for x pixel index
+  reg [10:0] CounterX; //counter for x pixel index
   reg [9:0] CounterY; //counter for y pixel index
   
   reg Vsync;
   reg Hsync;
   
   wire CounterXmaxed;
-    assign CounterXmaxed = ( CounterX == 799 );
+    assign CounterXmaxed = ( CounterX == 1039 );
   
   wire CounterYmaxed;
-    assign CounterYmaxed = ( CounterY == 599 );
+    assign CounterYmaxed = ( CounterY == 665 );
   
   //X pixel index update
   always @ ( posedge clk)
@@ -47,18 +47,28 @@ module RenderModule(
   begin
     if( rst | CounterYmaxed )
       CounterY <= 0;
-    else
+    else if(CounterXmaxed)
       CounterY <= CounterY + 1;
   end
   
   always @( posedge clk )
   begin
-    Hsync <= (CounterX[9:4]==0);   // active for 16 clocks
-    Vsync <= (CounterY==0);   // active for 768 clocks
+		if(rst | CounterX==975)
+			Hsync <= 0;
+		else if(CounterX==855)
+			Hsync <= 1;
+  end
+  
+    always @( posedge clk )
+  begin
+		if(rst | CounterY==642 & CounterX==1039)
+			Vsync <= 0;
+		else if(CounterY==636 & CounterX==1039)
+			Vsync <= 1;
   end
   
   //CONSTANT IS FOR DEBUG!
-  assign VGA_out[5:0] = 6'b001111;
+  assign VGA_out[5:0] = (CounterX<800 & CounterY<600)?6'b001111:6'b0;
   assign VGA_out[6] = Vsync;
   assign VGA_out[7] = Hsync;
  
