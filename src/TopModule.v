@@ -8,14 +8,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module TopModule(
-    input clk50M,
-    //input rst,
-  
-    output [7:0] aio
+    input clk_in,  
+    output [12:5] aio
   );
 
-  RenderModule(
-    .clk( clk50M ),
+  RenderModule renderer(
+    .clk( clk_in ),
     .VGA_out( aio )
   );
  

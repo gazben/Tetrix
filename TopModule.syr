@@ -116,12 +116,10 @@ Parsing module <TopModule>.
 WARNING:HDLCompiler:1016 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 17: Port Pixel_Bus is not connected to this instance
 
 Elaborating module <TopModule>.
-WARNING:HDLCompiler:604 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 17: Module instantiation should have an instance name
 
 Elaborating module <RenderModule>.
 WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\RenderModule.v" Line 43: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\RenderModule.v" Line 51: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:189 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 19: Size mismatch in connection of port <VGA_out>. Formal port size is 10-bit while actual signal size is 8-bit.
 WARNING:HDLCompiler:552 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 17: Input port Pixel_Bus[7] is not connected on this instance
 
 =========================================================================
@@ -130,18 +128,19 @@ WARNING:HDLCompiler:552 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 17: In
 
 Synthesizing Unit <TopModule>.
     Related source file is "F:\Prog_Projectek\Tetrix\src\TopModule.v".
-WARNING:Xst:2898 - Port 'Pixel_Bus', unconnected in block instance '_i000001', is tied to GND.
-WARNING:Xst:2898 - Port 'Pixel_Bus_Enable', unconnected in block instance '_i000001', is tied to GND.
-WARNING:Xst:2898 - Port 'rst', unconnected in block instance '_i000001', is tied to GND.
-INFO:Xst:3210 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" line 17: Output port <PixelCord_x> of the instance <_i000001> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" line 17: Output port <PixelCord_y> of the instance <_i000001> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" line 17: Output port <InViewableArea> of the instance <_i000001> is unconnected or connected to loadless signal.
+WARNING:Xst:2898 - Port 'Pixel_Bus', unconnected in block instance 'renderer', is tied to GND.
+WARNING:Xst:2898 - Port 'Pixel_Bus_Enable', unconnected in block instance 'renderer', is tied to GND.
+WARNING:Xst:2898 - Port 'rst', unconnected in block instance 'renderer', is tied to GND.
+INFO:Xst:3210 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" line 17: Output port <PixelCord_x> of the instance <renderer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" line 17: Output port <PixelCord_y> of the instance <renderer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" line 17: Output port <InViewableArea> of the instance <renderer> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <TopModule> synthesized.
 
 Synthesizing Unit <RenderModule>.
     Related source file is "F:\Prog_Projectek\Tetrix\RenderModule.v".
+WARNING:Xst:647 - Input <Pixel_Bus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Pixel_Bus_Enable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <PixelCord_x> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <PixelCord_y> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -197,28 +196,9 @@ Macro Statistics
 Optimizing unit <TopModule> ...
 
 Optimizing unit <RenderModule> ...
-WARNING:Xst:2677 - Node <_i000001/CounterX_9> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_8> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_7> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_6> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_5> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_4> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_3> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_2> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_1> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterX_0> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_9> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_8> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_7> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_6> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_5> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_4> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_3> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_2> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_1> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/CounterY_0> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/Vsync> of sequential type is unconnected in block <TopModule>.
-WARNING:Xst:2677 - Node <_i000001/Hsync> of sequential type is unconnected in block <TopModule>.
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <renderer/CounterY_0> 
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <renderer/CounterY_1> 
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_2> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <renderer/CounterY_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -229,7 +209,10 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+
 =========================================================================
 
 =========================================================================
@@ -251,8 +234,20 @@ Top Level Output File Name         : TopModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 81
 #      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 18
+#      LUT2                        : 17
+#      LUT5                        : 3
+#      LUT6                        : 4
+#      MUXCY                       : 18
+#      VCC                         : 1
+#      XORCY                       : 17
+# FlipFlops/Latches                : 19
+#      FD                          : 19
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
 # IO Buffers                       : 8
 #      OBUF                        : 8
 
@@ -263,19 +258,23 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              19  out of  11440     0%  
+ Number of Slice LUTs:                   44  out of   5720     0%  
+    Number used as Logic:                44  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:     44
+   Number with an unused Flip Flop:      25  out of     44    56%  
+   Number with an unused LUT:             0  out of     44     0%  
+   Number of fully used LUT-FF pairs:    19  out of     44    43%  
+   Number of unique control sets:         1
 
 IO Utilization: 
  Number of IOs:                           9
- Number of bonded IOBs:                   8  out of    102     7%  
+ Number of bonded IOBs:                   9  out of    102     8%  
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -295,7 +294,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_in                             | BUFGP                  | 19    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -305,9 +308,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: No path found
+   Minimum period: 4.247ns (Maximum Frequency: 235.460MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Maximum output required time after clock: 4.118ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -315,21 +318,72 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 4.247ns (frequency: 235.460MHz)
+  Total number of paths / destination ports: 290 / 19
+-------------------------------------------------------------------------
+Delay:               4.247ns (Levels of Logic = 3)
+  Source:            renderer/CounterX_9 (FF)
+  Destination:       renderer/CounterX_9 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising
+
+  Data Path: renderer/CounterX_9 to renderer/CounterX_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.525   1.196  renderer/CounterX_9 (renderer/CounterX_9)
+     LUT5:I0->O            1   0.254   0.682  renderer/CounterXmaxed<9>_SW0 (N6)
+     LUT6:I5->O           10   0.254   1.008  renderer/CounterXmaxed<9> (renderer/CounterXmaxed)
+     LUT2:I1->O            1   0.254   0.000  renderer/CounterX_9_rstpot (renderer/CounterX_9_rstpot)
+     FD:D                      0.074          renderer/CounterX_9
+    ----------------------------------------
+    Total                      4.247ns (1.361ns logic, 2.886ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            renderer/Hsync (FF)
+  Destination:       aio<12> (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: renderer/Hsync to aio<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  renderer/Hsync (renderer/Hsync)
+     OBUF:I->O                 2.912          aio_12_OBUF (aio<12>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    4.247|         |         |         |
+---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.65 secs
+Total CPU time to Xst completion: 6.07 secs
  
 --> 
 
-Total memory usage is 257804 kilobytes
+Total memory usage is 257996 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   35 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

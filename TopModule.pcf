@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.68d on Sun Nov 02 17:51:54 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "aio<5>" LOCATE = SITE "P142" LEVEL 1;
+COMP "aio<6>" LOCATE = SITE "P141" LEVEL 1;
+COMP "aio<7>" LOCATE = SITE "P140" LEVEL 1;
+COMP "aio<8>" LOCATE = SITE "P139" LEVEL 1;
+COMP "aio<9>" LOCATE = SITE "P138" LEVEL 1;
+COMP "aio<10>" LOCATE = SITE "P137" LEVEL 1;
+COMP "aio<11>" LOCATE = SITE "P134" LEVEL 1;
+COMP "aio<12>" LOCATE = SITE "P133" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "P55" LEVEL 1;
+TIMEGRP clk_in = BEL "renderer/Vsync" BEL "renderer/Hsync" BEL
+        "renderer/CounterX_9" BEL "renderer/CounterX_8" BEL
+        "renderer/CounterX_7" BEL "renderer/CounterX_6" BEL
+        "renderer/CounterX_5" BEL "renderer/CounterX_4" BEL
+        "renderer/CounterX_3" BEL "renderer/CounterX_2" BEL
+        "renderer/CounterX_1" BEL "renderer/CounterX_0" BEL
+        "renderer/CounterY_9" BEL "renderer/CounterY_8" BEL
+        "renderer/CounterY_7" BEL "renderer/CounterY_6" BEL
+        "renderer/CounterY_5" BEL "renderer/CounterY_4" BEL
+        "renderer/CounterY_3" BEL "clk_in_BUFGP/BUFG";
+TS_clk_in = PERIOD TIMEGRP "clk_in" 50 MHz HIGH 50%;
+SCHEMATIC END;
+

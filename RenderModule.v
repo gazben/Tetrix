@@ -12,7 +12,7 @@ module RenderModule(
   input         clk,
   input         rst,
   
-  output [9:0]  VGA_out,
+  output [7:0]  VGA_out,
   output [9:0]  PixelCord_x, 
   output [9:0]  PixelCord_y,
   output        InViewableArea
@@ -51,17 +51,15 @@ module RenderModule(
       CounterY <= CounterY + 1;
   end
   
-  always @(posedge clk)
+  always @( posedge clk )
   begin
     Hsync <= (CounterX[9:4]==0);   // active for 16 clocks
     Vsync <= (CounterY==0);   // active for 768 clocks
   end
   
-  //DEBUG
- // assign Pixel_Bus = 8'b00111111;
-  
-  assign VGA_out[7:0] = Pixel_Bus;
-  assign VGA_out[8] = Vsync;
-  assign VGA_out[9] = Hsync;
+  //CONSTANT IS FOR DEBUG!
+  assign VGA_out[5:0] = 6'b001111;
+  assign VGA_out[6] = Vsync;
+  assign VGA_out[7] = Hsync;
  
 endmodule
