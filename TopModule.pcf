@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Sun Nov 02 23:22:56 2014
+// Written by: Map P.58f on Mon Nov 03 00:06:50 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -13,18 +13,21 @@ COMP "aio<10>" LOCATE = SITE "P137" LEVEL 1;
 COMP "aio<11>" LOCATE = SITE "P134" LEVEL 1;
 COMP "aio<12>" LOCATE = SITE "P133" LEVEL 1;
 COMP "clk_in" LOCATE = SITE "P55" LEVEL 1;
-TIMEGRP clk_in = BEL "renderer/Hsync" BEL "renderer/Vsync" BEL
-        "renderer/CounterX_0" BEL "renderer/CounterX_10" BEL
+TIMEGRP clk_in = BEL "renderer/CounterY_9" BEL "renderer/CounterY_8" BEL
+        "renderer/CounterY_7" BEL "renderer/CounterY_6" BEL
+        "renderer/CounterY_5" BEL "renderer/CounterY_4" BEL
+        "renderer/CounterY_3" BEL "renderer/CounterY_2" BEL
+        "renderer/CounterY_1" BEL "renderer/CounterY_0" BEL
+        "renderer/c/color1_2" BEL "renderer/c/color1_1" BEL
+        "renderer/c/color1_0" BEL "renderer/c/color2_2" BEL
+        "renderer/c/color2_1" BEL "renderer/c/color2_0" BEL "renderer/Vsync"
+        BEL "renderer/Hsync" BEL "renderer/CounterX_10" BEL
         "renderer/CounterX_9" BEL "renderer/CounterX_8" BEL
         "renderer/CounterX_7" BEL "renderer/CounterX_6" BEL
         "renderer/CounterX_5" BEL "renderer/CounterX_4" BEL
         "renderer/CounterX_3" BEL "renderer/CounterX_2" BEL
-        "renderer/CounterX_1" BEL "renderer/CounterY_9" BEL
-        "renderer/CounterY_8" BEL "renderer/CounterY_7" BEL
-        "renderer/CounterY_6" BEL "renderer/CounterY_5" BEL
-        "renderer/CounterY_4" BEL "renderer/CounterY_3" BEL
-        "renderer/CounterY_2" BEL "renderer/CounterY_1" BEL
-        "renderer/CounterY_0" BEL "clk_in_BUFGP/BUFG";
+        "renderer/CounterX_1" BEL "renderer/CounterX_0" BEL
+        "clk_in_BUFGP/BUFG";
 TS_clk_in = PERIOD TIMEGRP "clk_in" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

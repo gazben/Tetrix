@@ -67,8 +67,11 @@ module RenderModule(
       Vsync <= 1;
   end
   
+  wire [5:0] cColor;
+  color c(.clk(clk), .rst(rst), .x(CounterX), .y(CounterY), .color(cColor));
+  
   //CONSTANT IS FOR DEBUG!
-  assign VGA_out[5:0] = (CounterX < 800 & CounterY < 600) ? 6'b000011 : 6'b0;
+  assign VGA_out[5:0] = (CounterX < 800 & CounterY < 600) ? cColor : 6'b0;
   assign VGA_out[6] = Vsync;
   assign VGA_out[7] = Hsync;
  

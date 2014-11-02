@@ -1,7 +1,7 @@
-#Release 14.6 - par P.68d (nt64)
-#Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+#Release 14.5 - par P.58f (nt)
+#Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-#Sun Nov 02 23:23:04 2014
+#Mon Nov 03 00:06:59 2014
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -118,9 +118,9 @@ P96,,,GND,,,,,,,,,,,,
 P97,,IOBS,IO_L34N_1,UNUSED,,1,,,,,,,,,
 P98,,IOBM,IO_L34P_1,UNUSED,,1,,,,,,,,,
 P99,,IOBS,IO_L33N_1,UNUSED,,1,,,,,,,,,
-P100,rst,IOB,IO_L33P_1,INPUT,LVCMOS25*,1,,,,NONE,,UNLOCATED,NO,NONE,
+P100,,IOBM,IO_L33P_1,UNUSED,,1,,,,,,,,,
 P101,,IOBS,IO_L32N_1,UNUSED,,1,,,,,,,,,
-P102,,IOBM,IO_L32P_1,UNUSED,,1,,,,,,,,,
+P102,rst,IOB,IO_L32P_1,INPUT,LVCMOS25*,1,,,,NONE,,UNLOCATED,NO,NONE,
 P103,,,VCCO_1,,,1,,,,,any******,,,,
 P104,,IOBS,IO_L1N_VREF_1,UNUSED,,1,,,,,,,,,
 P105,,IOBM,IO_L1P_1,UNUSED,,1,,,,,,,,,
