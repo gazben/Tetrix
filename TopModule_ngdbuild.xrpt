@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<document OS="nt" product="ISE" version="14.6">
+<document OS="nt64" product="ISE" version="14.6">
 
   <!--The data in this file is primarily intended for consumption by Xilinx tools.
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Sun Nov 02 22:02:30 2014">
+  <application stringID="NgdBuild" timeStamp="Sun Nov 02 23:22:45 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.6\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.6\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.6\ISE_DS\ISE\bin\nt;C:\Xilinx\14.6\ISE_DS\ISE\lib\nt;C:\Xilinx\14.6\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.6\ISE_DS\PlanAhead\bin;C:\Xilinx\14.6\ISE_DS\EDK\bin\nt;C:\Xilinx\14.6\ISE_DS\EDK\lib\nt;C:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.6\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.6\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.6\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_be\bin;C:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_le\bin;C:\Xilinx\14.6\ISE_DS\common\bin\nt;C:\Xilinx\14.6\ISE_DS\common\lib\nt;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd"/>
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="F:\Xilinx\14.6\ISE_DS\ISE\\lib\nt64;F:\Xilinx\14.6\ISE_DS\ISE\\bin\nt64;F:\Xilinx\14.6\ISE_DS\ISE\bin\nt64;F:\Xilinx\14.6\ISE_DS\ISE\lib\nt64;F:\Xilinx\14.6\ISE_DS\ISE\..\..\..\DocNav;F:\Xilinx\14.6\ISE_DS\PlanAhead\bin;F:\Xilinx\14.6\ISE_DS\EDK\bin\nt64;F:\Xilinx\14.6\ISE_DS\EDK\lib\nt64;F:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\nt\bin;F:\Xilinx\14.6\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;F:\Xilinx\14.6\ISE_DS\EDK\gnuwin\bin;F:\Xilinx\14.6\ISE_DS\EDK\gnu\arm\nt\bin;F:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;F:\Xilinx\14.6\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;F:\Xilinx\14.6\ISE_DS\common\bin\nt64;F:\Xilinx\14.6\ISE_DS\common\lib\nt64;%CommonProgramFiles%\Microsoft Shared\Windows Live;C:\windows\system32;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.7.0_40\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\NVIDIA Corporation\Cg\bin;C:\Program Files (x86)\NVIDIA Corporation\Cg\bin.x64;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files (x86)\LLVM\bin;F:\Program Files\mingw-w64\x86_64-4.9.2-posix-seh-rt_v3-rev0\mingw64\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
-          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY"/>
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="C:\Xilinx\14.6\ISE_DS\ISE\"/>
+          <item stringID="value" value="F:\Xilinx\14.6\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\14.6\ISE_DS\ISE"/>
+          <item stringID="value" value="F:\Xilinx\14.6\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\14.6\ISE_DS\EDK"/>
+          <item stringID="value" value="F:\Xilinx\14.6\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\14.6\ISE_DS\PlanAhead"/>
+          <item stringID="value" value="F:\Xilinx\14.6\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
-        <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 32-bit"/>
+        <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="Service Pack 1  (build 7601)"/>
       </item>
-      <item stringID="User_EnvHost" value="e-maru"/>
+      <item stringID="User_EnvHost" value="Gazben-PowaaaPC"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Pentium(R) Dual-Core  CPU      E5400  @ 2.70GHz"/>
-          <item stringID="speed" value="2968 MHz"/>
+          <item stringID="arch" value="AMD FX(tm)-8320 Eight-Core Processor           "/>
+          <item stringID="speed" value="3492 MHz"/>
         </row>
       </table>
     </section>

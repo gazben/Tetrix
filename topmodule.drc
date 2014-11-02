@@ -1,7 +1,7 @@
-Release 14.6 Drc P.68d (nt)
+Release 14.6 Drc P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Nov 02 22:03:06 2014
+Sun Nov 02 23:23:16 2014
 
 drc -z TopModule.ncd TopModule.pcf
 

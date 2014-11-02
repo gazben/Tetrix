@@ -1,7 +1,7 @@
 set -tmpdir "F:/Prog_Projectek/Tetrix/xst/projnav.tmp"
 set -xsthdpdir "F:/Prog_Projectek/Tetrix/xst"
 run -compileonly yes
--p xc6slx9-3-tqg144
+-p xc6slx9-2-tqg144
 -top RenderModule
 -opt_mode Speed
 -opt_level 1
