@@ -23,39 +23,48 @@
 #endif
 static const char *ng0 = "F:/Prog_Projectek/Tetrix/Tetrix_test.v";
 static int ng1[] = {0, 0};
+static int ng2[] = {1, 0};
 
 
 
-static void Initial_39_0(char *t0)
+static void Initial_41_0(char *t0)
 {
     char *t1;
     char *t2;
     char *t3;
 
-LAB0:    t1 = (t0 + 2368U);
+LAB0:    t1 = (t0 + 2528U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(39, ng0);
+LAB2:    xsi_set_current_line(41, ng0);
 
-LAB4:    xsi_set_current_line(41, ng0);
+LAB4:    xsi_set_current_line(43, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1448);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(44, ng0);
-    t2 = (t0 + 2176);
+    t2 = ((char*)((ng2)));
+    t3 = (t0 + 1608);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
+    xsi_set_current_line(46, ng0);
+    t2 = (t0 + 2336);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
-LAB5:    goto LAB1;
+LAB5:    xsi_set_current_line(49, ng0);
+    t2 = ((char*)((ng1)));
+    t3 = (t0 + 1608);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
+    goto LAB1;
 
 }
 
-static void Always_50_1(char *t0)
+static void Always_52_1(char *t0)
 {
     char t3[8];
     char *t1;
@@ -82,20 +91,20 @@ static void Always_50_1(char *t0)
     unsigned int t23;
     char *t24;
 
-LAB0:    t1 = (t0 + 2616U);
+LAB0:    t1 = (t0 + 2776U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(50, ng0);
-    t2 = (t0 + 2424);
+LAB2:    xsi_set_current_line(52, ng0);
+    t2 = (t0 + 2584);
     xsi_process_wait(t2, 5000LL);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(50, ng0);
+LAB4:    xsi_set_current_line(52, ng0);
     t4 = (t0 + 1448);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -147,9 +156,9 @@ LAB10:    t18 = *((unsigned int *)t3);
 }
 
 
-extern void work_m_00000000000503757383_0630562162_init()
+extern void work_m_00000000001116567182_0630562162_init()
 {
-	static char *pe[] = {(void *)Initial_39_0,(void *)Always_50_1};
-	xsi_register_didat("work_m_00000000000503757383_0630562162", "isim/Tetrix_test_isim_beh.exe.sim/work/m_00000000000503757383_0630562162.didat");
+	static char *pe[] = {(void *)Initial_41_0,(void *)Always_52_1};
+	xsi_register_didat("work_m_00000000001116567182_0630562162", "isim/Tetrix_test_isim_beh.exe.sim/work/m_00000000001116567182_0630562162.didat");
 	xsi_register_executes(pe);
 }

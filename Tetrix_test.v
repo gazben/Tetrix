@@ -26,25 +26,27 @@ module Tetrix_test;
 
 	// Inputs
 	reg clk;
-
+  reg rst;
+  
 	// Outputs
 	wire [12:5] aio;
 
 	// Instantiate the Unit Under Test (UUT)
 	TopModule uut (
-		.clk_in(clk), 
+		.clk_in(clk),
+    .rst(rst),
 		.aio(aio)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-
+    rst = 1;
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-
+    rst = 0;
 	end
 
 always #5 clk <= ~clk;  
