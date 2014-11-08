@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.11 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: TopModule.prj
 
@@ -519,11 +519,11 @@ clk_in         |    5.674|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.84 secs
+Total CPU time to Xst completion: 6.77 secs
  
 --> 
 
-Total memory usage is 259020 kilobytes
+Total memory usage is 259084 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   10 (   0 filtered)

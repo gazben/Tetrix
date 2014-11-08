@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-GAZBEN-POWAAAPC::  Sat Nov 08 21:18:45 2014
+GAZBEN-POWAAAPC::  Sat Nov 08 22:33:37 2014
 
 par -w -intstyle ise -ol high -mt off TopModule_map.ncd TopModule.ncd
 TopModule.pcf 
@@ -98,9 +98,9 @@ Phase  1  : 677 unrouted;      REAL time: 4 secs
 
 Phase  2  : 611 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 222 unrouted;      REAL time: 5 secs 
+Phase  3  : 209 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 222 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  4  : 209 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
 
 Updating file: TopModule.ncd with current fully routed design.
 
@@ -166,10 +166,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 6 secs 
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 5 secs 
 
-Peak Memory Usage:  381 MB
+Peak Memory Usage:  379 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

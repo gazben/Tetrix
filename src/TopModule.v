@@ -60,8 +60,8 @@ module TopModule(
   led_out(
    .clk( clk_in ),
    .rst( rst ),
-   .dig0( led_wire[7:4] ),
-   .dig1( led_wire[3:0] ),
+   .dig0( led_wire[3:0] ),
+   .dig1( led_wire[7:4] ),
    .led( led_wire ),
    .cpld_rstn( cpld_rstn ),  
    .cpld_clk( cpld_clk ),      

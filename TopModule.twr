@@ -440,30 +440,32 @@ Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point keyboard_module/keyShrReg__2 (SLICE_X16Y49.CX), 1 path
+Paths for end point _i000001/cntr_15 (SLICE_X18Y45.D6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               keyboard_module/keyShrReg_4 (FF)
-  Destination:          keyboard_module/keyShrReg__2 (FF)
+  Source:               _i000001/cntr_15 (FF)
+  Destination:          _i000001/cntr_15 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.474ns (Levels of Logic = 0)
-  Clock Path Skew:      0.004ns (0.076 - 0.072)
+  Data Path Delay:      0.470ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
   Source Clock:         clk_in_BUFGP rising at 20.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: keyboard_module/keyShrReg_4 to keyboard_module/keyShrReg__2
+  Minimum Data Path at Fast Process Corner: _i000001/cntr_15 to _i000001/cntr_15
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y49.AQ      Tcko                  0.198   keyboard_module/keyShrReg<7>
-                                                       keyboard_module/keyShrReg_4
-    SLICE_X16Y49.CX      net (fanout=3)        0.235   keyboard_module/keyShrReg<4>
-    SLICE_X16Y49.CLK     Tckdi       (-Th)    -0.041   keyboard_module/keyShrReg_<3>
-                                                       keyboard_module/keyShrReg__2
+    SLICE_X18Y45.DQ      Tcko                  0.200   _i000001/cntr<15>
+                                                       _i000001/cntr_15
+    SLICE_X18Y45.D6      net (fanout=10)       0.033   _i000001/cntr<15>
+    SLICE_X18Y45.CLK     Tah         (-Th)    -0.237   _i000001/cntr<15>
+                                                       _i000001/cntr<15>_rt
+                                                       _i000001/Mcount_cntr_xor<15>
+                                                       _i000001/cntr_15
     -------------------------------------------------  ---------------------------
-    Total                                      0.474ns (0.239ns logic, 0.235ns route)
-                                                       (50.4% logic, 49.6% route)
+    Total                                      0.470ns (0.437ns logic, 0.033ns route)
+                                                       (93.0% logic, 7.0% route)
 
 --------------------------------------------------------------------------------
 
@@ -525,7 +527,7 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sat Nov 08 21:18:57 2014 
+Analysis completed Sat Nov 08 22:33:48 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
