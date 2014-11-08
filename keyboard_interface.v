@@ -13,17 +13,31 @@ module keyboard_interface(
   input data,              //Data pin form keyboard
   output [7:0] keyCodeOut   //Printing input data to led
   );
-  
-  reg [10:0] keyShrReg;
-  
+
+  wire negedgeKeyClkReg;
+    assign negedgeKeyClkReg = ( clkKeyboardReg[1] & ~clkKeyboardReg[0] )? 1 : 0;
+
+  reg [1:0] clkKeyboardReg;  
   always@ ( posedge clk )
   begin
     if( rst )
-      keyShrReg := 0;
-    //else if(  )
-      
+      clkKeyboardReg <= 0;
+    else 
+      clkKeyboardReg <= {clkKeyboardReg, clkKeyboard};
   end
 
-assign keyCodeOut = 8'b00000001;
+  reg [10:0] keyShrReg;
+  always@ ( posedge clk )
+  begin
+    if( rst )
+      keyShrReg <= 0;
+    else if ( negedgeKeyClkReg )
+      keyShrReg <= { keyShrReg, data };
+  end
+  
+wire isValid_wire;
+  assign isValid_wire = ( |keyShrReg[9:1] & ~keyShrReg[0] & keyShrReg[10] );
+
+assign keyCodeOut = ( isValid_wire ) ? keyShrReg[7:0] : 0;
 
 endmodule
