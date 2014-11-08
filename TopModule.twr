@@ -28,19 +28,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk_in = PERIOD TIMEGRP "clk_in" 50 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1566 paths analyzed, 315 endpoints analyzed, 0 failing endpoints
+ 1600 paths analyzed, 339 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.699ns.
+ Minimum period is   4.430ns.
 --------------------------------------------------------------------------------
 
-Paths for end point renderer/CounterX_0 (SLICE_X13Y52.A4), 11 paths
+Paths for end point renderer/c/color1_0 (SLICE_X15Y58.A5), 55 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.301ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_6 (FF)
-  Destination:          renderer/CounterX_0 (FF)
+Slack (setup path):     15.570ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_5 (FF)
+  Destination:          renderer/c/color1_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.655ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.009ns (0.190 - 0.199)
+  Data Path Delay:      4.382ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.013ns (0.288 - 0.301)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -51,33 +51,36 @@ Slack (setup path):     15.301ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_6 to renderer/CounterX_0
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_5 to renderer/c/color1_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.CQ      Tcko                  0.430   renderer/CounterX<7>
-                                                       renderer/CounterX_6
-    SLICE_X7Y57.B2       net (fanout=12)       1.641   renderer/CounterX<6>
-    SLICE_X7Y57.B        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>_SW0
-    SLICE_X7Y57.A5       net (fanout=2)        0.237   N6
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>
-    SLICE_X13Y52.A4      net (fanout=15)       1.456   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_0_rstpot
-                                                       renderer/CounterX_0
+    SLICE_X19Y56.BQ      Tcko                  0.430   renderer/CounterX<7>
+                                                       renderer/CounterX_5
+    SLICE_X12Y58.D2      net (fanout=14)       1.558   renderer/CounterX<5>
+    SLICE_X12Y58.D       Tilo                  0.254   N22
+                                                       renderer/c/x[10]_GND_3_o_LessThan_6_o13_SW0
+    SLICE_X12Y58.C6      net (fanout=1)        0.143   N22
+    SLICE_X12Y58.C       Tilo                  0.255   N22
+                                                       renderer/c/x[10]_GND_3_o_LessThan_6_o13
+    SLICE_X15Y58.B2      net (fanout=3)        0.880   renderer/c/x[10]_GND_3_o_LessThan_6_o
+    SLICE_X15Y58.B       Tilo                  0.259   renderer/c/color1<1>
+                                                       renderer/c/Mmux_PWR_3_o_GND_3_o_mux_14_OUT11
+    SLICE_X15Y58.A5      net (fanout=1)        0.230   renderer/c/PWR_3_o_GND_3_o_mux_14_OUT<0>
+    SLICE_X15Y58.CLK     Tas                   0.373   renderer/c/color1<1>
+                                                       renderer/c/color1_0_glue_set
+                                                       renderer/c/color1_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.655ns (1.321ns logic, 3.334ns route)
-                                                       (28.4% logic, 71.6% route)
+    Total                                      4.382ns (1.571ns logic, 2.811ns route)
+                                                       (35.9% logic, 64.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.332ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_3 (FF)
-  Destination:          renderer/CounterX_0 (FF)
+Slack (setup path):     15.707ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_2 (FF)
+  Destination:          renderer/c/color1_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.633ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      4.245ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.013ns (0.288 - 0.301)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -88,33 +91,36 @@ Slack (setup path):     15.332ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_3 to renderer/CounterX_0
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_2 to renderer/c/color1_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y52.DQ      Tcko                  0.430   renderer/CounterX<3>
-                                                       renderer/CounterX_3
-    SLICE_X7Y57.B1       net (fanout=14)       1.619   renderer/CounterX<3>
-    SLICE_X7Y57.B        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>_SW0
-    SLICE_X7Y57.A5       net (fanout=2)        0.237   N6
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>
-    SLICE_X13Y52.A4      net (fanout=15)       1.456   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_0_rstpot
-                                                       renderer/CounterX_0
+    SLICE_X19Y55.CQ      Tcko                  0.430   renderer/CounterX<3>
+                                                       renderer/CounterX_2
+    SLICE_X12Y58.D3      net (fanout=15)       1.421   renderer/CounterX<2>
+    SLICE_X12Y58.D       Tilo                  0.254   N22
+                                                       renderer/c/x[10]_GND_3_o_LessThan_6_o13_SW0
+    SLICE_X12Y58.C6      net (fanout=1)        0.143   N22
+    SLICE_X12Y58.C       Tilo                  0.255   N22
+                                                       renderer/c/x[10]_GND_3_o_LessThan_6_o13
+    SLICE_X15Y58.B2      net (fanout=3)        0.880   renderer/c/x[10]_GND_3_o_LessThan_6_o
+    SLICE_X15Y58.B       Tilo                  0.259   renderer/c/color1<1>
+                                                       renderer/c/Mmux_PWR_3_o_GND_3_o_mux_14_OUT11
+    SLICE_X15Y58.A5      net (fanout=1)        0.230   renderer/c/PWR_3_o_GND_3_o_mux_14_OUT<0>
+    SLICE_X15Y58.CLK     Tas                   0.373   renderer/c/color1<1>
+                                                       renderer/c/color1_0_glue_set
+                                                       renderer/c/color1_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.633ns (1.321ns logic, 3.312ns route)
-                                                       (28.5% logic, 71.5% route)
+    Total                                      4.245ns (1.571ns logic, 2.674ns route)
+                                                       (37.0% logic, 63.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.464ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     15.778ns (requirement - (data path - clock path skew + uncertainty))
   Source:               renderer/CounterX_4 (FF)
-  Destination:          renderer/CounterX_0 (FF)
+  Destination:          renderer/c/color1_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.492ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.009ns (0.190 - 0.199)
+  Data Path Delay:      4.174ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.013ns (0.288 - 0.301)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -125,33 +131,39 @@ Slack (setup path):     15.464ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_4 to renderer/CounterX_0
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_4 to renderer/c/color1_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.AQ      Tcko                  0.430   renderer/CounterX<7>
+    SLICE_X19Y56.AQ      Tcko                  0.430   renderer/CounterX<7>
                                                        renderer/CounterX_4
-    SLICE_X7Y57.A3       net (fanout=12)       1.974   renderer/CounterX<4>
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>
-    SLICE_X13Y52.A4      net (fanout=15)       1.456   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_0_rstpot
-                                                       renderer/CounterX_0
+    SLICE_X12Y58.D1      net (fanout=12)       1.350   renderer/CounterX<4>
+    SLICE_X12Y58.D       Tilo                  0.254   N22
+                                                       renderer/c/x[10]_GND_3_o_LessThan_6_o13_SW0
+    SLICE_X12Y58.C6      net (fanout=1)        0.143   N22
+    SLICE_X12Y58.C       Tilo                  0.255   N22
+                                                       renderer/c/x[10]_GND_3_o_LessThan_6_o13
+    SLICE_X15Y58.B2      net (fanout=3)        0.880   renderer/c/x[10]_GND_3_o_LessThan_6_o
+    SLICE_X15Y58.B       Tilo                  0.259   renderer/c/color1<1>
+                                                       renderer/c/Mmux_PWR_3_o_GND_3_o_mux_14_OUT11
+    SLICE_X15Y58.A5      net (fanout=1)        0.230   renderer/c/PWR_3_o_GND_3_o_mux_14_OUT<0>
+    SLICE_X15Y58.CLK     Tas                   0.373   renderer/c/color1<1>
+                                                       renderer/c/color1_0_glue_set
+                                                       renderer/c/color1_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.492ns (1.062ns logic, 3.430ns route)
-                                                       (23.6% logic, 76.4% route)
+    Total                                      4.174ns (1.571ns logic, 2.603ns route)
+                                                       (37.6% logic, 62.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point renderer/CounterX_3 (SLICE_X13Y52.D4), 11 paths
+Paths for end point renderer/Vsync (SLICE_X11Y59.A3), 21 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     15.309ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_6 (FF)
-  Destination:          renderer/CounterX_3 (FF)
+Slack (setup path):     15.878ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_4 (FF)
+  Destination:          renderer/Vsync (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.647ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.009ns (0.190 - 0.199)
+  Data Path Delay:      4.097ns (Levels of Logic = 3)
+  Clock Path Skew:      0.010ns (0.685 - 0.675)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -162,32 +174,109 @@ Slack (setup path):     15.309ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_6 to renderer/CounterX_3
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_4 to renderer/Vsync
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.CQ      Tcko                  0.430   renderer/CounterX<7>
-                                                       renderer/CounterX_6
-    SLICE_X7Y57.B2       net (fanout=12)       1.641   renderer/CounterX<6>
-    SLICE_X7Y57.B        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>_SW0
-    SLICE_X7Y57.A5       net (fanout=2)        0.237   N6
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>
-    SLICE_X13Y52.D4      net (fanout=15)       1.448   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_3_rstpot
-                                                       renderer/CounterX_3
+    SLICE_X19Y56.AQ      Tcko                  0.430   renderer/CounterX<7>
+                                                       renderer/CounterX_4
+    SLICE_X11Y59.D1      net (fanout=12)       1.669   renderer/CounterX<4>
+    SLICE_X11Y59.D       Tilo                  0.259   renderer/Vsync
+                                                       renderer/CounterXmaxed<10>_SW1
+    SLICE_X11Y59.B2      net (fanout=1)        0.543   N20
+    SLICE_X11Y59.B       Tilo                  0.259   renderer/Vsync
+                                                       renderer/GND_2_o_GND_2_o_AND_2_o
+    SLICE_X11Y59.A3      net (fanout=1)        0.564   renderer/GND_2_o_GND_2_o_AND_2_o
+    SLICE_X11Y59.CLK     Tas                   0.373   renderer/Vsync
+                                                       renderer/Vsync_rstpot
+                                                       renderer/Vsync
     -------------------------------------------------  ---------------------------
-    Total                                      4.647ns (1.321ns logic, 3.326ns route)
-                                                       (28.4% logic, 71.6% route)
+    Total                                      4.097ns (1.321ns logic, 2.776ns route)
+                                                       (32.2% logic, 67.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.340ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     15.928ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_1 (FF)
+  Destination:          renderer/Vsync (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.047ns (Levels of Logic = 3)
+  Clock Path Skew:      0.010ns (0.685 - 0.675)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_1 to renderer/Vsync
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y55.BQ      Tcko                  0.430   renderer/CounterX<3>
+                                                       renderer/CounterX_1
+    SLICE_X11Y59.D4      net (fanout=14)       1.619   renderer/CounterX<1>
+    SLICE_X11Y59.D       Tilo                  0.259   renderer/Vsync
+                                                       renderer/CounterXmaxed<10>_SW1
+    SLICE_X11Y59.B2      net (fanout=1)        0.543   N20
+    SLICE_X11Y59.B       Tilo                  0.259   renderer/Vsync
+                                                       renderer/GND_2_o_GND_2_o_AND_2_o
+    SLICE_X11Y59.A3      net (fanout=1)        0.564   renderer/GND_2_o_GND_2_o_AND_2_o
+    SLICE_X11Y59.CLK     Tas                   0.373   renderer/Vsync
+                                                       renderer/Vsync_rstpot
+                                                       renderer/Vsync
+    -------------------------------------------------  ---------------------------
+    Total                                      4.047ns (1.321ns logic, 2.726ns route)
+                                                       (32.6% logic, 67.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.099ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_3 (FF)
+  Destination:          renderer/Vsync (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.876ns (Levels of Logic = 3)
+  Clock Path Skew:      0.010ns (0.685 - 0.675)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_3 to renderer/Vsync
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y55.DQ      Tcko                  0.430   renderer/CounterX<3>
+                                                       renderer/CounterX_3
+    SLICE_X13Y59.B1      net (fanout=14)       1.330   renderer/CounterX<3>
+    SLICE_X13Y59.B       Tilo                  0.259   N6
+                                                       renderer/CounterXmaxed<10>_SW0
+    SLICE_X11Y59.B5      net (fanout=2)        0.661   N6
+    SLICE_X11Y59.B       Tilo                  0.259   renderer/Vsync
+                                                       renderer/GND_2_o_GND_2_o_AND_2_o
+    SLICE_X11Y59.A3      net (fanout=1)        0.564   renderer/GND_2_o_GND_2_o_AND_2_o
+    SLICE_X11Y59.CLK     Tas                   0.373   renderer/Vsync
+                                                       renderer/Vsync_rstpot
+                                                       renderer/Vsync
+    -------------------------------------------------  ---------------------------
+    Total                                      3.876ns (1.321ns logic, 2.555ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point renderer/CounterX_3 (SLICE_X19Y55.D3), 11 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.882ns (requirement - (data path - clock path skew + uncertainty))
   Source:               renderer/CounterX_3 (FF)
   Destination:          renderer/CounterX_3 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.625ns (Levels of Logic = 3)
+  Data Path Delay:      4.083ns (Levels of Logic = 3)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
@@ -203,29 +292,29 @@ Slack (setup path):     15.340ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y52.DQ      Tcko                  0.430   renderer/CounterX<3>
+    SLICE_X19Y55.DQ      Tcko                  0.430   renderer/CounterX<3>
                                                        renderer/CounterX_3
-    SLICE_X7Y57.B1       net (fanout=14)       1.619   renderer/CounterX<3>
-    SLICE_X7Y57.B        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
+    SLICE_X13Y59.B1      net (fanout=14)       1.330   renderer/CounterX<3>
+    SLICE_X13Y59.B       Tilo                  0.259   N6
                                                        renderer/CounterXmaxed<10>_SW0
-    SLICE_X7Y57.A5       net (fanout=2)        0.237   N6
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
+    SLICE_X13Y59.A5      net (fanout=2)        0.237   N6
+    SLICE_X13Y59.A       Tilo                  0.259   N6
                                                        renderer/CounterXmaxed<10>
-    SLICE_X13Y52.D4      net (fanout=15)       1.448   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
+    SLICE_X19Y55.D3      net (fanout=15)       1.195   renderer/CounterXmaxed
+    SLICE_X19Y55.CLK     Tas                   0.373   renderer/CounterX<3>
                                                        renderer/CounterX_3_rstpot
                                                        renderer/CounterX_3
     -------------------------------------------------  ---------------------------
-    Total                                      4.625ns (1.321ns logic, 3.304ns route)
-                                                       (28.6% logic, 71.4% route)
+    Total                                      4.083ns (1.321ns logic, 2.762ns route)
+                                                       (32.4% logic, 67.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.472ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_4 (FF)
+Slack (setup path):     16.142ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_10 (FF)
   Destination:          renderer/CounterX_3 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.484ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.009ns (0.190 - 0.199)
+  Data Path Delay:      3.804ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.019ns (0.284 - 0.303)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -236,33 +325,33 @@ Slack (setup path):     15.472ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_4 to renderer/CounterX_3
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_10 to renderer/CounterX_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.AQ      Tcko                  0.430   renderer/CounterX<7>
-                                                       renderer/CounterX_4
-    SLICE_X7Y57.A3       net (fanout=12)       1.974   renderer/CounterX<4>
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
+    SLICE_X19Y57.CQ      Tcko                  0.430   renderer/CounterX<10>
+                                                       renderer/CounterX_10
+    SLICE_X13Y59.B2      net (fanout=12)       1.051   renderer/CounterX<10>
+    SLICE_X13Y59.B       Tilo                  0.259   N6
+                                                       renderer/CounterXmaxed<10>_SW0
+    SLICE_X13Y59.A5      net (fanout=2)        0.237   N6
+    SLICE_X13Y59.A       Tilo                  0.259   N6
                                                        renderer/CounterXmaxed<10>
-    SLICE_X13Y52.D4      net (fanout=15)       1.448   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
+    SLICE_X19Y55.D3      net (fanout=15)       1.195   renderer/CounterXmaxed
+    SLICE_X19Y55.CLK     Tas                   0.373   renderer/CounterX<3>
                                                        renderer/CounterX_3_rstpot
                                                        renderer/CounterX_3
     -------------------------------------------------  ---------------------------
-    Total                                      4.484ns (1.062ns logic, 3.422ns route)
-                                                       (23.7% logic, 76.3% route)
+    Total                                      3.804ns (1.321ns logic, 2.483ns route)
+                                                       (34.7% logic, 65.3% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point renderer/CounterX_1 (SLICE_X13Y52.B5), 11 paths
---------------------------------------------------------------------------------
-Slack (setup path):     15.364ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_6 (FF)
-  Destination:          renderer/CounterX_1 (FF)
+Slack (setup path):     16.158ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               renderer/CounterX_5 (FF)
+  Destination:          renderer/CounterX_3 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.592ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.009ns (0.190 - 0.199)
+  Data Path Delay:      3.790ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.017ns (0.284 - 0.301)
   Source Clock:         clk_in_BUFGP rising at 0.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -273,103 +362,57 @@ Slack (setup path):     15.364ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_6 to renderer/CounterX_1
+  Maximum Data Path at Slow Process Corner: renderer/CounterX_5 to renderer/CounterX_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y53.CQ      Tcko                  0.430   renderer/CounterX<7>
-                                                       renderer/CounterX_6
-    SLICE_X7Y57.B2       net (fanout=12)       1.641   renderer/CounterX<6>
-    SLICE_X7Y57.B        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>_SW0
-    SLICE_X7Y57.A5       net (fanout=2)        0.237   N6
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
+    SLICE_X19Y56.BQ      Tcko                  0.430   renderer/CounterX<7>
+                                                       renderer/CounterX_5
+    SLICE_X13Y59.A2      net (fanout=14)       1.533   renderer/CounterX<5>
+    SLICE_X13Y59.A       Tilo                  0.259   N6
                                                        renderer/CounterXmaxed<10>
-    SLICE_X13Y52.B5      net (fanout=15)       1.393   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_1_rstpot
-                                                       renderer/CounterX_1
-    -------------------------------------------------  ---------------------------
-    Total                                      4.592ns (1.321ns logic, 3.271ns route)
-                                                       (28.8% logic, 71.2% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     15.395ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_3 (FF)
-  Destination:          renderer/CounterX_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.570ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_in_BUFGP rising at 0.000ns
-  Destination Clock:    clk_in_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_3 to renderer/CounterX_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y52.DQ      Tcko                  0.430   renderer/CounterX<3>
+    SLICE_X19Y55.D3      net (fanout=15)       1.195   renderer/CounterXmaxed
+    SLICE_X19Y55.CLK     Tas                   0.373   renderer/CounterX<3>
+                                                       renderer/CounterX_3_rstpot
                                                        renderer/CounterX_3
-    SLICE_X7Y57.B1       net (fanout=14)       1.619   renderer/CounterX<3>
-    SLICE_X7Y57.B        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>_SW0
-    SLICE_X7Y57.A5       net (fanout=2)        0.237   N6
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>
-    SLICE_X13Y52.B5      net (fanout=15)       1.393   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_1_rstpot
-                                                       renderer/CounterX_1
     -------------------------------------------------  ---------------------------
-    Total                                      4.570ns (1.321ns logic, 3.249ns route)
-                                                       (28.9% logic, 71.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     15.527ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               renderer/CounterX_4 (FF)
-  Destination:          renderer/CounterX_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.429ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.009ns (0.190 - 0.199)
-  Source Clock:         clk_in_BUFGP rising at 0.000ns
-  Destination Clock:    clk_in_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: renderer/CounterX_4 to renderer/CounterX_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y53.AQ      Tcko                  0.430   renderer/CounterX<7>
-                                                       renderer/CounterX_4
-    SLICE_X7Y57.A3       net (fanout=12)       1.974   renderer/CounterX<4>
-    SLICE_X7Y57.A        Tilo                  0.259   renderer/CounterX[10]_CounterY[9]_AND_3_o1
-                                                       renderer/CounterXmaxed<10>
-    SLICE_X13Y52.B5      net (fanout=15)       1.393   renderer/CounterXmaxed
-    SLICE_X13Y52.CLK     Tas                   0.373   renderer/CounterX<3>
-                                                       renderer/CounterX_1_rstpot
-                                                       renderer/CounterX_1
-    -------------------------------------------------  ---------------------------
-    Total                                      4.429ns (1.062ns logic, 3.367ns route)
-                                                       (24.0% logic, 76.0% route)
+    Total                                      3.790ns (1.062ns logic, 2.728ns route)
+                                                       (28.0% logic, 72.0% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clk_in = PERIOD TIMEGRP "clk_in" 50 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point renderer/Hsync (SLICE_X17Y55.A6), 1 path
+Paths for end point renderer/Vsync (SLICE_X11Y59.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               renderer/Vsync (FF)
+  Destination:          renderer/Vsync (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.440ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_in_BUFGP rising at 20.000ns
+  Destination Clock:    clk_in_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: renderer/Vsync to renderer/Vsync
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y59.AQ      Tcko                  0.198   renderer/Vsync
+                                                       renderer/Vsync
+    SLICE_X11Y59.A6      net (fanout=2)        0.027   renderer/Vsync
+    SLICE_X11Y59.CLK     Tah         (-Th)    -0.215   renderer/Vsync
+                                                       renderer/Vsync_rstpot
+                                                       renderer/Vsync
+    -------------------------------------------------  ---------------------------
+    Total                                      0.440ns (0.413ns logic, 0.027ns route)
+                                                       (93.9% logic, 6.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point renderer/Hsync (SLICE_X17Y58.A6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - data path))
   Source:               renderer/Hsync (FF)
@@ -385,10 +428,10 @@ Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y55.AQ      Tcko                  0.198   renderer/Hsync
+    SLICE_X17Y58.AQ      Tcko                  0.198   renderer/Hsync
                                                        renderer/Hsync
-    SLICE_X17Y55.A6      net (fanout=2)        0.027   renderer/Hsync
-    SLICE_X17Y55.CLK     Tah         (-Th)    -0.215   renderer/Hsync
+    SLICE_X17Y58.A6      net (fanout=2)        0.027   renderer/Hsync
+    SLICE_X17Y58.CLK     Tah         (-Th)    -0.215   renderer/Hsync
                                                        renderer/Hsync_rstpot
                                                        renderer/Hsync
     -------------------------------------------------  ---------------------------
@@ -397,58 +440,30 @@ Slack (hold path):      0.440ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point keyboard_module/keyShrReg_3 (SLICE_X16Y42.DX), 1 path
+Paths for end point keyboard_module/keyShrReg__2 (SLICE_X16Y49.CX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.455ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               keyboard_module/keyShrReg_2 (FF)
-  Destination:          keyboard_module/keyShrReg_3 (FF)
+Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               keyboard_module/keyShrReg_4 (FF)
+  Destination:          keyboard_module/keyShrReg__2 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.455ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.474ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.076 - 0.072)
   Source Clock:         clk_in_BUFGP rising at 20.000ns
   Destination Clock:    clk_in_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: keyboard_module/keyShrReg_2 to keyboard_module/keyShrReg_3
+  Minimum Data Path at Fast Process Corner: keyboard_module/keyShrReg_4 to keyboard_module/keyShrReg__2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y42.CQ      Tcko                  0.234   keyboard_module/keyShrReg<3>
-                                                       keyboard_module/keyShrReg_2
-    SLICE_X16Y42.DX      net (fanout=3)        0.180   keyboard_module/keyShrReg<2>
-    SLICE_X16Y42.CLK     Tckdi       (-Th)    -0.041   keyboard_module/keyShrReg<3>
-                                                       keyboard_module/keyShrReg_3
+    SLICE_X15Y49.AQ      Tcko                  0.198   keyboard_module/keyShrReg<7>
+                                                       keyboard_module/keyShrReg_4
+    SLICE_X16Y49.CX      net (fanout=3)        0.235   keyboard_module/keyShrReg<4>
+    SLICE_X16Y49.CLK     Tckdi       (-Th)    -0.041   keyboard_module/keyShrReg_<3>
+                                                       keyboard_module/keyShrReg__2
     -------------------------------------------------  ---------------------------
-    Total                                      0.455ns (0.275ns logic, 0.180ns route)
-                                                       (60.4% logic, 39.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point _i000001/mosi_shr_12 (SLICE_X17Y41.B6), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.465ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               _i000001/seg_data_4 (FF)
-  Destination:          _i000001/mosi_shr_12 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.467ns (Levels of Logic = 1)
-  Clock Path Skew:      0.002ns (0.033 - 0.031)
-  Source Clock:         clk_in_BUFGP rising at 20.000ns
-  Destination Clock:    clk_in_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: _i000001/seg_data_4 to _i000001/mosi_shr_12
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X16Y41.AQ      Tcko                  0.234   _i000001/seg_data<5>
-                                                       _i000001/seg_data_4
-    SLICE_X17Y41.B6      net (fanout=1)        0.018   _i000001/seg_data<4>
-    SLICE_X17Y41.CLK     Tah         (-Th)    -0.215   _i000001/mosi_shr<14>
-                                                       _i000001/Mmux_mosi_shr[15]_seg_data[7]_mux_14_OUT41
-                                                       _i000001/mosi_shr_12
-    -------------------------------------------------  ---------------------------
-    Total                                      0.467ns (0.449ns logic, 0.018ns route)
-                                                       (96.1% logic, 3.9% route)
+    Total                                      0.474ns (0.239ns logic, 0.235ns route)
+                                                       (50.4% logic, 49.6% route)
 
 --------------------------------------------------------------------------------
 
@@ -465,17 +480,17 @@ Slack: 17.334ns (period - min period limit)
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: renderer/c/color1<2>/CLK
-  Logical resource: renderer/c/color1_2/CK
-  Location pin: SLICE_X8Y53.CLK
+  Physical resource: renderer/c/color2<2>/CLK
+  Logical resource: renderer/c/color2_0/CK
+  Location pin: SLICE_X4Y60.CLK
   Clock network: clk_in_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: _i000001/seg_data<5>/CLK
-  Logical resource: _i000001/seg_data_6/CK
-  Location pin: SLICE_X16Y41.CLK
+  Physical resource: renderer/c/color2<2>/CLK
+  Logical resource: renderer/c/color2_1/CK
+  Location pin: SLICE_X4Y60.CLK
   Clock network: clk_in_BUFGP
 --------------------------------------------------------------------------------
 
@@ -492,7 +507,7 @@ Clock to Setup on destination clock clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |    4.699|         |         |         |
+clk_in         |    4.430|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -501,16 +516,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1566 paths, 0 nets, and 543 connections
+Constraints cover 1600 paths, 0 nets, and 572 connections
 
 Design statistics:
-   Minimum period:   4.699ns{1}   (Maximum frequency: 212.811MHz)
+   Minimum period:   4.430ns{1}   (Maximum frequency: 225.734MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sat Nov 08 21:11:14 2014 
+Analysis completed Sat Nov 08 21:18:57 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

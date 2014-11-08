@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: TopModule.prj
 
@@ -133,10 +133,9 @@ Elaborating module <led_out>.
 WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\led_out.v" Line 28: Result of 17-bit expression is truncated to fit in 16-bit target.
 
 Elaborating module <keyboard_interface>.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 18: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 26: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 35: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 41: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 20: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 28: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 37: Result of 12-bit expression is truncated to fit in 11-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -207,10 +206,10 @@ Unit <led_out> synthesized.
 Synthesizing Unit <keyboard_interface>.
     Related source file is "F:\Prog_Projectek\Tetrix\keyboard_interface.v".
     Found 11-bit register for signal <keyShrReg>.
+    Found 8-bit register for signal <keyShrReg_>.
     Found 2-bit register for signal <clkKeyboardReg>.
     Summary:
-	inferred  13 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred  21 D-type flip-flop(s).
 Unit <keyboard_interface> synthesized.
 
 =========================================================================
@@ -223,24 +222,23 @@ Macro Statistics
  10-bit adder                                          : 1
  11-bit adder                                          : 1
  16-bit adder                                          : 1
-# Registers                                            : 11
+# Registers                                            : 12
  1-bit register                                        : 2
  10-bit register                                       : 1
  11-bit register                                       : 2
  16-bit register                                       : 2
  2-bit register                                        : 1
  3-bit register                                        : 2
- 8-bit register                                        : 1
+ 8-bit register                                        : 2
 # Comparators                                          : 16
  10-bit comparator greater                             : 7
  10-bit comparator lessequal                           : 1
  11-bit comparator greater                             : 7
  11-bit comparator lessequal                           : 1
-# Multiplexers                                         : 15
+# Multiplexers                                         : 14
  1-bit 2-to-1 multiplexer                              : 4
  16-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 8
- 32-bit 2-to-1 multiplexer                             : 1
  6-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -280,18 +278,17 @@ Macro Statistics
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
  16-bit up counter                                     : 1
-# Registers                                            : 45
- Flip-Flops                                            : 45
+# Registers                                            : 53
+ Flip-Flops                                            : 53
 # Comparators                                          : 16
  10-bit comparator greater                             : 7
  10-bit comparator lessequal                           : 1
  11-bit comparator greater                             : 7
  11-bit comparator lessequal                           : 1
-# Multiplexers                                         : 15
+# Multiplexers                                         : 14
  1-bit 2-to-1 multiplexer                              : 4
  16-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 8
- 32-bit 2-to-1 multiplexer                             : 1
  6-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -326,8 +323,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 76
- Flip-Flops                                            : 76
+# Registers                                            : 84
+ Flip-Flops                                            : 84
 
 =========================================================================
 
@@ -350,20 +347,21 @@ Top Level Output File Name         : TopModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 214
+# BELS                             : 209
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 34
 #      LUT2                        : 4
-#      LUT3                        : 20
+#      LUT3                        : 16
 #      LUT4                        : 11
-#      LUT5                        : 21
-#      LUT6                        : 52
+#      LUT5                        : 10
+#      LUT6                        : 62
 #      MUXCY                       : 34
 #      VCC                         : 1
 #      XORCY                       : 33
-# FlipFlops/Latches                : 76
+# FlipFlops/Latches                : 84
 #      FD                          : 20
+#      FDE                         : 8
 #      FDR                         : 20
 #      FDRE                        : 36
 # Clock Buffers                    : 1
@@ -379,16 +377,16 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              76  out of  11440     0%  
- Number of Slice LUTs:                  145  out of   5720     2%  
-    Number used as Logic:               145  out of   5720     2%  
+ Number of Slice Registers:              84  out of  11440     0%  
+ Number of Slice LUTs:                  140  out of   5720     2%  
+    Number used as Logic:               140  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    155
-   Number with an unused Flip Flop:      79  out of    155    50%  
-   Number with an unused LUT:            10  out of    155     6%  
-   Number of fully used LUT-FF pairs:    66  out of    155    42%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    156
+   Number with an unused Flip Flop:      72  out of    156    46%  
+   Number with an unused LUT:            16  out of    156    10%  
+   Number of fully used LUT-FF pairs:    68  out of    156    43%  
+   Number of unique control sets:         8
 
 IO Utilization: 
  Number of IOs:                          16
@@ -418,7 +416,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_in                             | BUFGP                  | 76    |
+clk_in                             | BUFGP                  | 84    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -441,7 +439,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
   Clock period: 5.674ns (frequency: 176.243MHz)
-  Total number of paths / destination ports: 1566 / 126
+  Total number of paths / destination ports: 1600 / 142
 -------------------------------------------------------------------------
 Delay:               5.674ns (Levels of Logic = 4)
   Source:            renderer/CounterX_7 (FF)
@@ -521,13 +519,13 @@ clk_in         |    5.674|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.08 secs
+Total CPU time to Xst completion: 6.84 secs
  
 --> 
 
-Total memory usage is 258380 kilobytes
+Total memory usage is 259020 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

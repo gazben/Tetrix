@@ -14,6 +14,8 @@ module keyboard_interface(
   output [7:0] keyCodeOut   //Printing input data to led
   );
 
+  reg [7:0] keyShrReg_;
+
   wire negedgeKeyClkReg;
     assign negedgeKeyClkReg = ( clkKeyboardReg[1] & ~clkKeyboardReg[0] )? 1 : 0;
 
@@ -38,6 +40,12 @@ module keyboard_interface(
 wire isValid_wire;
   assign isValid_wire = ( |keyShrReg[9:1] & ~keyShrReg[0] & keyShrReg[10] );
 
-assign keyCodeOut = ( isValid_wire ) ? keyShrReg[7:0] : 0;
+  always @(posedge clk)
+  begin
+  if( isValid_wire ) 
+  keyShrReg_<=keyShrReg[9:2];
+  end
+
+assign keyCodeOut = keyShrReg_;
 
 endmodule

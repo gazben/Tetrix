@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Sat Nov 08 21:10:59 2014
+// Written by: Map P.68d on Sat Nov 08 21:18:42 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -38,14 +38,18 @@ TIMEGRP clk_in = BEL "renderer/CounterY_9" BEL "renderer/CounterY_8" BEL
         "_i000001/mosi_shr_6" BEL "_i000001/mosi_shr_5" BEL
         "_i000001/mosi_shr_4" BEL "_i000001/mosi_shr_3" BEL
         "_i000001/mosi_shr_2" BEL "_i000001/mosi_shr_1" BEL
-        "_i000001/mosi_shr_0" BEL "keyboard_module/keyShrReg_10" BEL
-        "keyboard_module/keyShrReg_9" BEL "keyboard_module/keyShrReg_8" BEL
-        "keyboard_module/keyShrReg_7" BEL "keyboard_module/keyShrReg_6" BEL
-        "keyboard_module/keyShrReg_5" BEL "keyboard_module/keyShrReg_4" BEL
-        "keyboard_module/keyShrReg_3" BEL "keyboard_module/keyShrReg_2" BEL
-        "keyboard_module/keyShrReg_1" BEL "keyboard_module/keyShrReg_0" BEL
-        "keyboard_module/clkKeyboardReg_1" BEL
-        "keyboard_module/clkKeyboardReg_0" BEL "renderer/c/color1_2" BEL
+        "_i000001/mosi_shr_0" BEL "keyboard_module/keyShrReg__7" BEL
+        "keyboard_module/keyShrReg__6" BEL "keyboard_module/keyShrReg__5" BEL
+        "keyboard_module/keyShrReg__4" BEL "keyboard_module/keyShrReg__3" BEL
+        "keyboard_module/keyShrReg__2" BEL "keyboard_module/keyShrReg__1" BEL
+        "keyboard_module/keyShrReg__0" BEL "keyboard_module/clkKeyboardReg_1"
+        BEL "keyboard_module/clkKeyboardReg_0" BEL
+        "keyboard_module/keyShrReg_10" BEL "keyboard_module/keyShrReg_9" BEL
+        "keyboard_module/keyShrReg_8" BEL "keyboard_module/keyShrReg_7" BEL
+        "keyboard_module/keyShrReg_6" BEL "keyboard_module/keyShrReg_5" BEL
+        "keyboard_module/keyShrReg_4" BEL "keyboard_module/keyShrReg_3" BEL
+        "keyboard_module/keyShrReg_2" BEL "keyboard_module/keyShrReg_1" BEL
+        "keyboard_module/keyShrReg_0" BEL "renderer/c/color1_2" BEL
         "renderer/c/color1_1" BEL "renderer/c/color1_0" BEL
         "renderer/c/color2_2" BEL "renderer/c/color2_1" BEL
         "renderer/c/color2_0" BEL "renderer/Hsync" BEL "renderer/Vsync" BEL
