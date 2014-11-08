@@ -1,16 +1,16 @@
-Release 14.5 - xst P.58f (nt)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: TopModule.prj
 
@@ -105,11 +105,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\color.v" into library work
+Analyzing Verilog file "F:\Prog_Projectek\Tetrix\color.v" into library work
 Parsing module <color>.
-Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\RenderModule.v" into library work
+Analyzing Verilog file "F:\Prog_Projectek\Tetrix\RenderModule.v" into library work
 Parsing module <RenderModule>.
-Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\src\TopModule.v" into library work
+Analyzing Verilog file "F:\Prog_Projectek\Tetrix\led_out.v" into library work
+Parsing module <led_out>.
+Analyzing Verilog file "F:\Prog_Projectek\Tetrix\keyboard_interface.v" into library work
+Parsing module <keyboard_interface>.
+Analyzing Verilog file "F:\Prog_Projectek\Tetrix\src\TopModule.v" into library work
 Parsing module <TopModule>.
 
 =========================================================================
@@ -119,23 +123,29 @@ Parsing module <TopModule>.
 Elaborating module <TopModule>.
 
 Elaborating module <RenderModule>.
-WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\RenderModule.v" Line 43: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\RenderModule.v" Line 51: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\RenderModule.v" Line 43: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\RenderModule.v" Line 51: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 Elaborating module <color>.
+WARNING:HDLCompiler:604 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 60: Module instantiation should have an instance name
+
+Elaborating module <led_out>.
+WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\led_out.v" Line 28: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <keyboard_interface>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <TopModule>.
-    Related source file is "C:\Users\netpok\Desktop\Tetrix\src\TopModule.v".
+    Related source file is "F:\Prog_Projectek\Tetrix\src\TopModule.v".
     Summary:
 	no macro.
 Unit <TopModule> synthesized.
 
 Synthesizing Unit <RenderModule>.
-    Related source file is "C:\Users\netpok\Desktop\Tetrix\RenderModule.v".
+    Related source file is "F:\Prog_Projectek\Tetrix\RenderModule.v".
     Found 10-bit register for signal <CounterY>.
     Found 1-bit register for signal <Hsync>.
     Found 1-bit register for signal <Vsync>.
@@ -152,7 +162,7 @@ Synthesizing Unit <RenderModule>.
 Unit <RenderModule> synthesized.
 
 Synthesizing Unit <color>.
-    Related source file is "C:\Users\netpok\Desktop\Tetrix\color.v".
+    Related source file is "F:\Prog_Projectek\Tetrix\color.v".
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 3-bit register for signal <color2>.
     Found 3-bit register for signal <color1>.
@@ -176,24 +186,55 @@ WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and lef
 	inferred   8 Multiplexer(s).
 Unit <color> synthesized.
 
+Synthesizing Unit <led_out>.
+    Related source file is "F:\Prog_Projectek\Tetrix\led_out.v".
+    Found 8-bit register for signal <seg_data>.
+    Found 16-bit register for signal <mosi_shr>.
+    Found 16-bit register for signal <cntr>.
+    Found 16-bit adder for signal <cntr[15]_GND_4_o_add_1_OUT> created at line 28.
+    Found 16x8-bit Read Only RAM for signal <dig_data[3]_PWR_4_o_wide_mux_7_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <led_out> synthesized.
+
+Synthesizing Unit <keyboard_interface>.
+    Related source file is "F:\Prog_Projectek\Tetrix\keyboard_interface.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clkKeyboard> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <keyboard_interface> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 3
  10-bit adder                                          : 1
  11-bit adder                                          : 1
-# Registers                                            : 6
+ 16-bit adder                                          : 1
+# Registers                                            : 9
  1-bit register                                        : 2
  10-bit register                                       : 1
  11-bit register                                       : 1
+ 16-bit register                                       : 2
  3-bit register                                        : 2
+ 8-bit register                                        : 1
 # Comparators                                          : 16
  10-bit comparator greater                             : 7
  10-bit comparator lessequal                           : 1
  11-bit comparator greater                             : 7
  11-bit comparator lessequal                           : 1
-# Multiplexers                                         : 9
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 8
  6-bit 2-to-1 multiplexer                              : 1
 
@@ -209,21 +250,41 @@ The following registers are absorbed into counter <CounterX>: 1 register on sign
 The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
 Unit <RenderModule> synthesized (advanced).
 
+Synthesizing (advanced) Unit <led_out>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+INFO:Xst:3231 - The small RAM <Mram_dig_data[3]_PWR_4_o_wide_mux_7_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <dig_data>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <led_out> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 2
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Counters                                             : 3
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
-# Registers                                            : 8
- Flip-Flops                                            : 8
+ 16-bit up counter                                     : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
 # Comparators                                          : 16
  10-bit comparator greater                             : 7
  10-bit comparator lessequal                           : 1
  11-bit comparator greater                             : 7
  11-bit comparator lessequal                           : 1
-# Multiplexers                                         : 9
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 8
  6-bit 2-to-1 multiplexer                              : 1
 
@@ -232,6 +293,13 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <seg_data_7> (without init value) has a constant value of 1 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <mosi_shr_14> (without init value) has a constant value of 0 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mosi_shr_15> (without init value) has a constant value of 0 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_data_1> (without init value) has a constant value of 0 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_data_2> (without init value) has a constant value of 0 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_data_6> (without init value) has a constant value of 1 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <seg_data_0> in Unit <led_out> is equivalent to the following 3 FFs/Latches, which will be removed : <seg_data_3> <seg_data_4> <seg_data_5> 
 
 Optimizing unit <TopModule> ...
 
@@ -239,9 +307,15 @@ Optimizing unit <RenderModule> ...
 
 Optimizing unit <color> ...
 
+Optimizing unit <led_out> ...
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_0> 
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_1> 
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_2> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_2> 
+INFO:Xst:2261 - The FF/Latch <renderer/CounterX_3> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_3> 
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 2.
 
 Final Macro Processing ...
 
@@ -249,8 +323,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 29
- Flip-Flops                                            : 29
+# Registers                                            : 56
+ Flip-Flops                                            : 56
 
 =========================================================================
 
@@ -273,27 +347,27 @@ Top Level Output File Name         : TopModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 131
+# BELS                             : 192
 #      GND                         : 1
-#      INV                         : 2
-#      LUT1                        : 19
+#      INV                         : 3
+#      LUT1                        : 34
 #      LUT2                        : 2
 #      LUT3                        : 13
-#      LUT4                        : 8
-#      LUT5                        : 7
-#      LUT6                        : 38
-#      MUXCY                       : 19
+#      LUT4                        : 10
+#      LUT5                        : 20
+#      LUT6                        : 41
+#      MUXCY                       : 34
 #      VCC                         : 1
-#      XORCY                       : 21
-# FlipFlops/Latches                : 29
-#      FD                          : 13
-#      FDR                         : 6
-#      FDRE                        : 10
+#      XORCY                       : 33
+# FlipFlops/Latches                : 56
+#      FD                          : 14
+#      FDR                         : 18
+#      FDRE                        : 24
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 9
+# IO Buffers                       : 13
 #      IBUF                        : 1
-#      OBUF                        : 8
+#      OBUF                        : 12
 
 Device utilization summary:
 ---------------------------
@@ -302,23 +376,23 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              29  out of  11440     0%  
- Number of Slice LUTs:                   89  out of   5720     1%  
-    Number used as Logic:                89  out of   5720     1%  
+ Number of Slice Registers:              56  out of  11440     0%  
+ Number of Slice LUTs:                  123  out of   5720     2%  
+    Number used as Logic:               123  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     89
-   Number with an unused Flip Flop:      60  out of     89    67%  
-   Number with an unused LUT:             0  out of     89     0%  
-   Number of fully used LUT-FF pairs:    29  out of     89    32%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    124
+   Number with an unused Flip Flop:      68  out of    124    54%  
+   Number with an unused LUT:             1  out of    124     0%  
+   Number of fully used LUT-FF pairs:    55  out of    124    44%  
+   Number of unique control sets:         6
 
 IO Utilization: 
- Number of IOs:                          10
- Number of bonded IOBs:                  10  out of    102     9%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  14  out of    102    13%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -341,7 +415,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_in                             | BUFGP                  | 29    |
+clk_in                             | BUFGP                  | 56    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -352,8 +426,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 5.629ns (Maximum Frequency: 177.651MHz)
-   Minimum input arrival time before clock: 4.630ns
+   Minimum period: 5.663ns (Maximum Frequency: 176.585MHz)
+   Minimum input arrival time before clock: 5.157ns
    Maximum output required time after clock: 7.302ns
    Maximum combinational path delay: No path found
 
@@ -363,10 +437,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
-  Clock period: 5.629ns (frequency: 177.651MHz)
-  Total number of paths / destination ports: 936 / 55
+  Clock period: 5.663ns (frequency: 176.585MHz)
+  Total number of paths / destination ports: 1346 / 96
 -------------------------------------------------------------------------
-Delay:               5.629ns (Levels of Logic = 4)
+Delay:               5.663ns (Levels of Logic = 4)
   Source:            renderer/CounterX_1 (FF)
   Destination:       renderer/c/color1_1 (FF)
   Source Clock:      clk_in rising
@@ -376,21 +450,21 @@ Delay:               5.629ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              11   0.525   1.494  renderer/CounterX_1 (renderer/CounterX_1)
-     LUT6:I0->O            1   0.254   0.682  renderer/c/x[10]_GND_3_o_LessThan_8_o121 (renderer/c/x[10]_GND_3_o_LessThan_8_o121)
+     FD:C->Q              13   0.525   1.528  renderer/CounterX_1 (renderer/CounterX_1)
+     LUT6:I1->O            1   0.254   0.682  renderer/c/x[10]_GND_3_o_LessThan_8_o121 (renderer/c/x[10]_GND_3_o_LessThan_8_o121)
      LUT5:I4->O            2   0.254   1.156  renderer/c/x[10]_GND_3_o_LessThan_8_o122 (renderer/c/x[10]_GND_3_o_LessThan_8_o12)
      LUT6:I1->O            1   0.254   0.682  renderer/c/Mmux_PWR_3_o_GND_3_o_mux_14_OUT11 (renderer/c/PWR_3_o_GND_3_o_mux_14_OUT<0>)
      LUT2:I1->O            1   0.254   0.000  renderer/c/color1_0_glue_set (renderer/c/color1_0_glue_set)
      FDR:D                     0.074          renderer/c/color1_0
     ----------------------------------------
-    Total                      5.629ns (1.615ns logic, 4.014ns route)
-                                       (28.7% logic, 71.3% route)
+    Total                      5.663ns (1.615ns logic, 4.048ns route)
+                                       (28.5% logic, 71.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
-  Total number of paths / destination ports: 23 / 23
+  Total number of paths / destination ports: 49 / 49
 -------------------------------------------------------------------------
-Offset:              4.630ns (Levels of Logic = 2)
+Offset:              5.157ns (Levels of Logic = 2)
   Source:            rst (PAD)
   Destination:       renderer/CounterY_9 (FF)
   Destination Clock: clk_in rising
@@ -399,30 +473,30 @@ Offset:              4.630ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   1.328   1.582  rst_IBUF (rst_IBUF)
+     IBUF:I->O            40   1.328   2.109  rst_IBUF (rst_IBUF)
      LUT6:I0->O           10   0.254   1.007  renderer/rst_CounterYmaxed_OR_33_o1 (renderer/rst_CounterYmaxed_OR_33_o)
      FDRE:R                    0.459          renderer/CounterY_0
     ----------------------------------------
-    Total                      4.630ns (2.041ns logic, 2.589ns route)
-                                       (44.1% logic, 55.9% route)
+    Total                      5.157ns (2.041ns logic, 3.116ns route)
+                                       (39.6% logic, 60.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
-  Total number of paths / destination ports: 86 / 8
+  Total number of paths / destination ports: 92 / 11
 -------------------------------------------------------------------------
 Offset:              7.302ns (Levels of Logic = 3)
   Source:            renderer/CounterX_10 (FF)
-  Destination:       aio<10> (PAD)
+  Destination:       aio_out<10> (PAD)
   Source Clock:      clk_in rising
 
-  Data Path: renderer/CounterX_10 to aio<10>
+  Data Path: renderer/CounterX_10 to aio_out<10>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              12   0.525   1.524  renderer/CounterX_10 (renderer/CounterX_10)
      LUT6:I0->O            6   0.254   1.152  renderer/CounterX[10]_CounterY[9]_AND_3_o1 (renderer/CounterX[10]_CounterY[9]_AND_3_o1)
-     LUT4:I0->O            1   0.254   0.681  renderer/Mmux_VGA_out<5:0>11 (aio_5_OBUF)
-     OBUF:I->O                 2.912          aio_5_OBUF (aio<5>)
+     LUT4:I0->O            1   0.254   0.681  renderer/Mmux_VGA_out<5:0>11 (aio_out_5_OBUF)
+     OBUF:I->O                 2.912          aio_out_5_OBUF (aio_out<5>)
     ----------------------------------------
     Total                      7.302ns (3.945ns logic, 3.357ns route)
                                        (54.0% logic, 46.0% route)
@@ -437,20 +511,20 @@ Clock to Setup on destination clock clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |    5.629|         |         |         |
+clk_in         |    5.663|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.89 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.50 secs
  
 --> 
 
-Total memory usage is 183176 kilobytes
+Total memory usage is 259148 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

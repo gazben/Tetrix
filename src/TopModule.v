@@ -10,17 +10,15 @@
 module TopModule(
     input clk_in,
     input rst,
-    output [12:5] aio
+    output cpld_clk,
+    output cpld_rstn,
+    output cpld_load,
+    output cpld_mosi,
+    output [12:5] aio_out,
+    input [14:13] aio_in
   );
+  wire [7:0] led_wire;
 
-  RenderModule renderer(
-    //.Pixel_Bus( 8'b00000000 ),
-    //.Pixel_Bus_Enable( 1'b0 ),
-    .clk( clk_in ),
-    .rst( rst ),
-    
-    .VGA_out( aio )
-  );
  /*
    input[7:0]    Pixel_Bus,
   input         Pixel_Bus_Enable,
@@ -31,8 +29,60 @@ module TopModule(
   output [9:0]  PixelCord_x, 
   output [9:0]  PixelCord_y,
   output        InViewableArea
- 
- 
  */
+  RenderModule renderer(
+    //.Pixel_Bus( 8'b00000000 ),
+    //.Pixel_Bus_Enable( 1'b0 ),
+    .clk( clk_in ),
+    .rst( rst ),
+    
+    .VGA_out( aio_out )
+  );
+  
+  
+  /*
+    input clk,
+    input rst,
+    input [7:0] led,
+    input [3:0] dig0,
+    input [3:0] dig1,
+    output cpld_clk,
+    output cpld_rstn,
+    output cpld_ld,
+    output cpld_mosi
+  */  
+  /*
+  NET cpld_rstn      LOC=P74; # | IOSTANDARD=LVCMOS33;
+  NET cpld_clk       LOC=P78; # | IOSTANDARD=LVCMOS33;
+  NET cpld_load      LOC=P80;# | IOSTANDARD=LVCMOS33;
+  NET cpld_mosi      LOC=P81; # | IOSTANDARD=LVCMOS33;
+  */
+  led_out(
+   .clk( clk_in ),
+   .rst( rst ),
+   .dig0( led_wire[7:4] ),
+   .dig1( led_wire[3:0] ),
+   .led( led_wire ),
+   .cpld_rstn( cpld_rstn ),  
+   .cpld_clk( cpld_clk ),      
+   .cpld_ld( cpld_load ),    
+   .cpld_mosi( cpld_mosi )      
+  );
+  
+  
+  /*
+  input clk,               // Clock pin form keyboard
+  input clk_keyboard,
+  input rst,
+  input data,              //Data pin form keyboard
+  output [7:0] keyCodeOut   //Printing input data to led
+  */
+  keyboard_interface keyboard_module(
+     .clk( clk_in ),
+     .clkKeyboard( aio_in[13] ),
+     .rst( rst ),
+     .data( aio_in[14] ),
+     .keyCodeOut( led_wire )
+  );
 
 endmodule

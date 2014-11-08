@@ -1,23 +1,40 @@
 //! **************************************************************************
-// Written by: Map P.58f on Mon Nov 03 00:06:50 2014
+// Written by: Map P.68d on Sat Nov 08 19:25:37 2014
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
-COMP "aio<5>" LOCATE = SITE "P142" LEVEL 1;
-COMP "aio<6>" LOCATE = SITE "P141" LEVEL 1;
-COMP "aio<7>" LOCATE = SITE "P140" LEVEL 1;
-COMP "aio<8>" LOCATE = SITE "P139" LEVEL 1;
-COMP "aio<9>" LOCATE = SITE "P138" LEVEL 1;
-COMP "aio<10>" LOCATE = SITE "P137" LEVEL 1;
-COMP "aio<11>" LOCATE = SITE "P134" LEVEL 1;
-COMP "aio<12>" LOCATE = SITE "P133" LEVEL 1;
+COMP "cpld_rstn" LOCATE = SITE "P74" LEVEL 1;
+COMP "cpld_clk" LOCATE = SITE "P78" LEVEL 1;
+COMP "cpld_mosi" LOCATE = SITE "P81" LEVEL 1;
+COMP "aio_out<10>" LOCATE = SITE "P137" LEVEL 1;
+COMP "aio_out<11>" LOCATE = SITE "P134" LEVEL 1;
+COMP "aio_out<12>" LOCATE = SITE "P133" LEVEL 1;
+COMP "aio_out<5>" LOCATE = SITE "P142" LEVEL 1;
+COMP "aio_out<6>" LOCATE = SITE "P141" LEVEL 1;
+COMP "aio_out<7>" LOCATE = SITE "P140" LEVEL 1;
+COMP "aio_out<8>" LOCATE = SITE "P139" LEVEL 1;
+COMP "aio_in<13>" LOCATE = SITE "P132" LEVEL 1;
+COMP "aio_out<9>" LOCATE = SITE "P138" LEVEL 1;
+COMP "aio_in<14>" LOCATE = SITE "P131" LEVEL 1;
 COMP "clk_in" LOCATE = SITE "P55" LEVEL 1;
+COMP "cpld_load" LOCATE = SITE "P80" LEVEL 1;
 TIMEGRP clk_in = BEL "renderer/CounterY_9" BEL "renderer/CounterY_8" BEL
         "renderer/CounterY_7" BEL "renderer/CounterY_6" BEL
         "renderer/CounterY_5" BEL "renderer/CounterY_4" BEL
         "renderer/CounterY_3" BEL "renderer/CounterY_2" BEL
-        "renderer/CounterY_1" BEL "renderer/CounterY_0" BEL
+        "renderer/CounterY_1" BEL "renderer/CounterY_0" BEL "_i000001/cntr_15"
+        BEL "_i000001/cntr_14" BEL "_i000001/cntr_13" BEL "_i000001/cntr_12"
+        BEL "_i000001/cntr_11" BEL "_i000001/cntr_10" BEL "_i000001/cntr_9"
+        BEL "_i000001/cntr_8" BEL "_i000001/cntr_7" BEL "_i000001/cntr_6" BEL
+        "_i000001/cntr_5" BEL "_i000001/cntr_4" BEL "_i000001/seg_data_0" BEL
+        "_i000001/mosi_shr_13" BEL "_i000001/mosi_shr_12" BEL
+        "_i000001/mosi_shr_11" BEL "_i000001/mosi_shr_10" BEL
+        "_i000001/mosi_shr_9" BEL "_i000001/mosi_shr_8" BEL
+        "_i000001/mosi_shr_7" BEL "_i000001/mosi_shr_6" BEL
+        "_i000001/mosi_shr_5" BEL "_i000001/mosi_shr_4" BEL
+        "_i000001/mosi_shr_3" BEL "_i000001/mosi_shr_2" BEL
+        "_i000001/mosi_shr_1" BEL "_i000001/mosi_shr_0" BEL
         "renderer/c/color1_2" BEL "renderer/c/color1_1" BEL
         "renderer/c/color1_0" BEL "renderer/c/color2_2" BEL
         "renderer/c/color2_1" BEL "renderer/c/color2_0" BEL "renderer/Vsync"

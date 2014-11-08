@@ -1,3 +1,5 @@
 verilog work "color.v"
 verilog work "RenderModule.v"
+verilog work "led_out.v"
+verilog work "keyboard_interface.v"
 verilog work "src/TopModule.v"
