@@ -38,12 +38,14 @@ module keyboard_interface(
   end
   
 wire isValid_wire;
-  assign isValid_wire = ( |keyShrReg[9:1] & ~keyShrReg[0] & keyShrReg[10] );
+  assign isValid_wire = ( keyShrReg[9:1] & ~keyShrReg[0] & keyShrReg[10] );
 
   always @(posedge clk)
   begin
   if( isValid_wire ) 
   keyShrReg_<=keyShrReg[9:2];
+  else
+	keyShrReg_<=0;
   end
 
 assign keyCodeOut = keyShrReg_;

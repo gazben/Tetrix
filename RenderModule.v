@@ -11,6 +11,8 @@ module RenderModule(
   //input         Pixel_Bus_Enable,
   input         clk,
   input         rst,
+  input			 kbClk,
+  input			 kbData,
   
   output [7:0]  VGA_out
   //output [9:0]  PixelCord_x, 
@@ -68,7 +70,7 @@ module RenderModule(
   end
   
   wire [5:0] cColor;
-  color c(.clk(clk), .rst(rst), .x(CounterX), .y(CounterY), .color(cColor));
+  timer c(.clk(clk), .rst(rst), .kbClk(kbClk), .kbData(kbData), .x(CounterX), .y(CounterY), .color(cColor));
   
   //CONSTANT IS FOR DEBUG!
   assign VGA_out[5:0] = (CounterX < 800 & CounterY < 600) ? cColor : 6'b0;

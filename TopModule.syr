@@ -1,16 +1,16 @@
-Release 14.6 - xst P.68d (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 14.5 - xst P.58f (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.37 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.37 secs
  
 --> Reading design: TopModule.prj
 
@@ -105,15 +105,23 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "F:\Prog_Projectek\Tetrix\color.v" into library work
-Parsing module <color>.
-Analyzing Verilog file "F:\Prog_Projectek\Tetrix\RenderModule.v" into library work
-Parsing module <RenderModule>.
-Analyzing Verilog file "F:\Prog_Projectek\Tetrix\led_out.v" into library work
-Parsing module <led_out>.
-Analyzing Verilog file "F:\Prog_Projectek\Tetrix\keyboard_interface.v" into library work
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\keyboard_interface.v" into library work
 Parsing module <keyboard_interface>.
-Analyzing Verilog file "F:\Prog_Projectek\Tetrix\src\TopModule.v" into library work
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\dec.v" into library work
+Parsing module <dec>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\dot.v" into library work
+Parsing module <dot>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\digit.v" into library work
+Parsing module <digit>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\clock.v" into library work
+Parsing module <clock>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\timer.v" into library work
+Parsing module <timer>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\RenderModule.v" into library work
+Parsing module <RenderModule>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\led_out.v" into library work
+Parsing module <led_out>.
+Analyzing Verilog file "C:\Users\netpok\Desktop\Tetrix\src\TopModule.v" into library work
 Parsing module <TopModule>.
 
 =========================================================================
@@ -123,40 +131,59 @@ Parsing module <TopModule>.
 Elaborating module <TopModule>.
 
 Elaborating module <RenderModule>.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\RenderModule.v" Line 43: Result of 12-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\RenderModule.v" Line 51: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\RenderModule.v" Line 45: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\RenderModule.v" Line 53: Result of 11-bit expression is truncated to fit in 10-bit target.
 
-Elaborating module <color>.
-WARNING:HDLCompiler:604 - "F:\Prog_Projectek\Tetrix\src\TopModule.v" Line 60: Module instantiation should have an instance name
+Elaborating module <timer>.
 
-Elaborating module <led_out>.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\led_out.v" Line 28: Result of 17-bit expression is truncated to fit in 16-bit target.
+Elaborating module <clock>.
 
 Elaborating module <keyboard_interface>.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 20: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 28: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "F:\Prog_Projectek\Tetrix\keyboard_interface.v" Line 37: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\keyboard_interface.v" Line 20: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\keyboard_interface.v" Line 28: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\keyboard_interface.v" Line 37: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\keyboard_interface.v" Line 41: Result of 9-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\netpok\Desktop\Tetrix\clock.v" Line 44: Size mismatch in connection of port <keyCodeOut>. Formal port size is 8-bit while actual signal size is 9-bit.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\clock.v" Line 55: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\clock.v" Line 65: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\clock.v" Line 73: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\clock.v" Line 81: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\clock.v" Line 89: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <digit>.
+
+Elaborating module <dec>.
+WARNING:HDLCompiler:189 - "C:\Users\netpok\Desktop\Tetrix\timer.v" Line 45: Size mismatch in connection of port <baseX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\netpok\Desktop\Tetrix\timer.v" Line 46: Size mismatch in connection of port <baseX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\netpok\Desktop\Tetrix\timer.v" Line 47: Size mismatch in connection of port <baseX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\netpok\Desktop\Tetrix\timer.v" Line 48: Size mismatch in connection of port <baseX>. Formal port size is 10-bit while actual signal size is 32-bit.
+
+Elaborating module <dot>.
+WARNING:HDLCompiler:604 - "C:\Users\netpok\Desktop\Tetrix\src\TopModule.v" Line 60: Module instantiation should have an instance name
+
+Elaborating module <led_out>.
+WARNING:HDLCompiler:413 - "C:\Users\netpok\Desktop\Tetrix\led_out.v" Line 28: Result of 17-bit expression is truncated to fit in 16-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <TopModule>.
-    Related source file is "F:\Prog_Projectek\Tetrix\src\TopModule.v".
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\src\TopModule.v".
     Summary:
 	no macro.
 Unit <TopModule> synthesized.
 
 Synthesizing Unit <RenderModule>.
-    Related source file is "F:\Prog_Projectek\Tetrix\RenderModule.v".
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\RenderModule.v".
     Found 10-bit register for signal <CounterY>.
     Found 1-bit register for signal <Hsync>.
     Found 1-bit register for signal <Vsync>.
     Found 11-bit register for signal <CounterX>.
-    Found 11-bit adder for signal <CounterX[10]_GND_2_o_add_3_OUT> created at line 43.
-    Found 10-bit adder for signal <CounterY[9]_GND_2_o_add_7_OUT> created at line 51.
-    Found 11-bit comparator greater for signal <CounterX[10]_GND_2_o_LessThan_20_o> created at line 74
-    Found 10-bit comparator greater for signal <CounterY[9]_PWR_2_o_LessThan_21_o> created at line 74
+    Found 11-bit adder for signal <CounterX[10]_GND_2_o_add_3_OUT> created at line 45.
+    Found 10-bit adder for signal <CounterY[9]_GND_2_o_add_7_OUT> created at line 53.
+    Found 11-bit comparator greater for signal <CounterX[10]_GND_2_o_LessThan_20_o> created at line 76
+    Found 10-bit comparator greater for signal <CounterY[9]_PWR_2_o_LessThan_21_o> created at line 76
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
@@ -164,47 +191,42 @@ Synthesizing Unit <RenderModule>.
 	inferred   1 Multiplexer(s).
 Unit <RenderModule> synthesized.
 
-Synthesizing Unit <color>.
-    Related source file is "F:\Prog_Projectek\Tetrix\color.v".
-WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 3-bit register for signal <color2>.
-    Found 3-bit register for signal <color1>.
-    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_2_o> created at line 34
-    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_4_o> created at line 36
-    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_5_o> created at line 38
-    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_6_o> created at line 40
-    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_7_o> created at line 42
-    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_8_o> created at line 44
-    Found 11-bit comparator lessequal for signal <x[10]_GND_3_o_LessThan_9_o> created at line 46
-    Found 10-bit comparator greater for signal <y[9]_GND_3_o_LessThan_19_o> created at line 54
-    Found 10-bit comparator greater for signal <y[9]_GND_3_o_LessThan_21_o> created at line 56
-    Found 10-bit comparator greater for signal <y[9]_GND_3_o_LessThan_22_o> created at line 58
-    Found 10-bit comparator greater for signal <y[9]_GND_3_o_LessThan_23_o> created at line 60
-    Found 10-bit comparator greater for signal <y[9]_GND_3_o_LessThan_24_o> created at line 62
-    Found 10-bit comparator greater for signal <y[9]_GND_3_o_LessThan_25_o> created at line 64
-    Found 10-bit comparator lessequal for signal <y[9]_PWR_3_o_LessThan_26_o> created at line 66
+Synthesizing Unit <timer>.
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\timer.v".
+    Found 6-bit register for signal <color_out>.
+    Found 11-bit comparator lessequal for signal <n0000> created at line 53
+    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_3_o> created at line 53
+    Found 11-bit comparator lessequal for signal <n0004> created at line 55
+    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_5_o> created at line 55
+    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_7_o> created at line 57
+    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_9_o> created at line 59
+    Found 11-bit comparator lessequal for signal <n0016> created at line 61
+    Found 11-bit comparator greater for signal <x[10]_GND_3_o_LessThan_11_o> created at line 61
     Summary:
 	inferred   6 D-type flip-flop(s).
-	inferred  14 Comparator(s).
-	inferred   8 Multiplexer(s).
-Unit <color> synthesized.
+	inferred   8 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <timer> synthesized.
 
-Synthesizing Unit <led_out>.
-    Related source file is "F:\Prog_Projectek\Tetrix\led_out.v".
-    Found 8-bit register for signal <seg_data>.
-    Found 16-bit register for signal <mosi_shr>.
-    Found 16-bit register for signal <cntr>.
-    Found 16-bit adder for signal <cntr[15]_GND_4_o_add_1_OUT> created at line 28.
-    Found 16x8-bit Read Only RAM for signal <dig_data[3]_PWR_4_o_wide_mux_7_OUT>
+Synthesizing Unit <clock>.
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\clock.v".
+    Found 4-bit register for signal <d1r>.
+    Found 4-bit register for signal <d2r>.
+    Found 4-bit register for signal <d3r>.
+    Found 4-bit register for signal <d4r>.
+    Found 26-bit register for signal <cnt>.
+    Found 26-bit adder for signal <cnt[25]_GND_4_o_add_2_OUT> created at line 55.
+    Found 4-bit adder for signal <d1r[3]_GND_4_o_add_8_OUT> created at line 65.
+    Found 4-bit adder for signal <d2r[3]_GND_4_o_add_16_OUT> created at line 73.
+    Found 4-bit adder for signal <d3r[3]_GND_4_o_add_26_OUT> created at line 81.
+    Found 4-bit adder for signal <d4r[3]_GND_4_o_add_38_OUT> created at line 89.
     Summary:
-	inferred   1 RAM(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred  40 D-type flip-flop(s).
-	inferred   5 Multiplexer(s).
-Unit <led_out> synthesized.
+	inferred   5 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+Unit <clock> synthesized.
 
 Synthesizing Unit <keyboard_interface>.
-    Related source file is "F:\Prog_Projectek\Tetrix\keyboard_interface.v".
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\keyboard_interface.v".
     Found 11-bit register for signal <keyShrReg>.
     Found 8-bit register for signal <keyShrReg_>.
     Found 2-bit register for signal <clkKeyboardReg>.
@@ -212,34 +234,95 @@ Synthesizing Unit <keyboard_interface>.
 	inferred  21 D-type flip-flop(s).
 Unit <keyboard_interface> synthesized.
 
+Synthesizing Unit <digit>.
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\digit.v".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 6-bit register for signal <color_out>.
+    Found 11-bit adder for signal <n0078> created at line 46.
+    Found 11-bit adder for signal <n0080> created at line 50.
+    Found 11-bit adder for signal <n0082> created at line 50.
+    Found 11-bit comparator lessequal for signal <n0003> created at line 40
+    Found 11-bit comparator greater for signal <x[10]_BUS_0002_LessThan_9_o> created at line 40
+    Found 10-bit comparator lessequal for signal <n0010> created at line 42
+    Found 10-bit comparator greater for signal <y[9]_GND_7_o_LessThan_17_o> created at line 42
+    Found 10-bit comparator greater for signal <n0016> created at line 44
+    Found 10-bit comparator greater for signal <y[9]_GND_7_o_LessThan_23_o> created at line 44
+    Found 11-bit comparator greater for signal <x[10]_BUS_0008_LessThan_27_o> created at line 46
+    Found 10-bit comparator greater for signal <n0027> created at line 46
+    Found 10-bit comparator greater for signal <y[9]_GND_7_o_LessThan_29_o> created at line 46
+    Found 11-bit comparator greater for signal <x[10]_BUS_0012_LessThan_39_o> created at line 50
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+Unit <digit> synthesized.
+
+Synthesizing Unit <dec>.
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\dec.v".
+    Summary:
+	no macro.
+Unit <dec> synthesized.
+
+Synthesizing Unit <dot>.
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\dot.v".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 6-bit register for signal <color_out>.
+    Found 11-bit comparator lessequal for signal <n0000> created at line 34
+    Found 11-bit comparator greater for signal <x[10]_GND_9_o_LessThan_3_o> created at line 34
+    Found 10-bit comparator lessequal for signal <n0005> created at line 34
+    Found 10-bit comparator greater for signal <y[9]_GND_9_o_LessThan_5_o> created at line 34
+    Found 10-bit comparator lessequal for signal <n0009> created at line 34
+    Found 10-bit comparator greater for signal <y[9]_GND_9_o_LessThan_7_o> created at line 34
+    Summary:
+	inferred   6 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <dot> synthesized.
+
+Synthesizing Unit <led_out>.
+    Related source file is "C:\Users\netpok\Desktop\Tetrix\led_out.v".
+    Found 8-bit register for signal <seg_data>.
+    Found 16-bit register for signal <mosi_shr>.
+    Found 16-bit register for signal <cntr>.
+    Found 16-bit adder for signal <cntr[15]_GND_10_o_add_1_OUT> created at line 28.
+    Found 16x8-bit Read Only RAM for signal <dig_data[3]_PWR_9_o_wide_mux_7_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <led_out> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
  16x8-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 3
+# Adders/Subtractors                                   : 20
  10-bit adder                                          : 1
- 11-bit adder                                          : 1
+ 11-bit adder                                          : 13
  16-bit adder                                          : 1
-# Registers                                            : 12
+ 26-bit adder                                          : 1
+ 4-bit adder                                           : 4
+# Registers                                            : 24
  1-bit register                                        : 2
  10-bit register                                       : 1
- 11-bit register                                       : 2
+ 11-bit register                                       : 3
  16-bit register                                       : 2
- 2-bit register                                        : 1
- 3-bit register                                        : 2
- 8-bit register                                        : 2
-# Comparators                                          : 16
- 10-bit comparator greater                             : 7
- 10-bit comparator lessequal                           : 1
- 11-bit comparator greater                             : 7
- 11-bit comparator lessequal                           : 1
-# Multiplexers                                         : 14
+ 2-bit register                                        : 2
+ 26-bit register                                       : 1
+ 4-bit register                                        : 4
+ 6-bit register                                        : 6
+ 8-bit register                                        : 3
+# Comparators                                          : 56
+ 10-bit comparator greater                             : 23
+ 10-bit comparator lessequal                           : 6
+ 11-bit comparator greater                             : 19
+ 11-bit comparator lessequal                           : 8
+# Multiplexers                                         : 10
  1-bit 2-to-1 multiplexer                              : 4
  16-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 8
- 6-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 5
 
 =========================================================================
 
@@ -247,15 +330,38 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+INFO:Xst:2261 - The FF/Latch <color_out_3> in Unit <d1m> is equivalent to the following FF/Latch, which will be removed : <color_out_4> 
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <d1m> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
+INFO:Xst:2261 - The FF/Latch <color_out_3> in Unit <d2m> is equivalent to the following FF/Latch, which will be removed : <color_out_4> 
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <d2m> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
+INFO:Xst:2261 - The FF/Latch <color_out_3> in Unit <d3m> is equivalent to the following FF/Latch, which will be removed : <color_out_4> 
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <d3m> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
+INFO:Xst:2261 - The FF/Latch <color_out_3> in Unit <d4m> is equivalent to the following FF/Latch, which will be removed : <color_out_4> 
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <d4m> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <d> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
+INFO:Xst:2261 - The FF/Latch <color_out_3> in Unit <d> is equivalent to the following FF/Latch, which will be removed : <color_out_4> 
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <d1m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <d2m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <d3m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <d4m>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <d>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <RenderModule>.
 The following registers are absorbed into counter <CounterX>: 1 register on signal <CounterX>.
 The following registers are absorbed into counter <CounterY>: 1 register on signal <CounterY>.
 Unit <RenderModule> synthesized (advanced).
 
+Synthesizing (advanced) Unit <clock>.
+The following registers are absorbed into counter <d1r>: 1 register on signal <d1r>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <d2r>: 1 register on signal <d2r>.
+The following registers are absorbed into counter <d3r>: 1 register on signal <d3r>.
+The following registers are absorbed into counter <d4r>: 1 register on signal <d4r>.
+Unit <clock> synthesized (advanced).
+
 Synthesizing (advanced) Unit <led_out>.
 The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
-INFO:Xst:3231 - The small RAM <Mram_dig_data[3]_PWR_4_o_wide_mux_7_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_dig_data[3]_PWR_9_o_wide_mux_7_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -274,28 +380,37 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  16x8-bit single-port distributed Read Only RAM        : 1
-# Counters                                             : 3
+# Adders/Subtractors                                   : 12
+ 11-bit adder                                          : 12
+# Counters                                             : 8
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
  16-bit up counter                                     : 1
-# Registers                                            : 53
- Flip-Flops                                            : 53
-# Comparators                                          : 16
- 10-bit comparator greater                             : 7
- 10-bit comparator lessequal                           : 1
- 11-bit comparator greater                             : 7
- 11-bit comparator lessequal                           : 1
-# Multiplexers                                         : 14
+ 26-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+# Comparators                                          : 56
+ 10-bit comparator greater                             : 23
+ 10-bit comparator lessequal                           : 6
+ 11-bit comparator greater                             : 19
+ 11-bit comparator lessequal                           : 8
+# Multiplexers                                         : 10
  1-bit 2-to-1 multiplexer                              : 4
  16-bit 2-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 8
- 6-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 5
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <digit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <color_out_4> (without init value) has a constant value of 0 in block <digit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <color_out_3> (without init value) has a constant value of 0 in block <dot>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <color_out_4> (without init value) has a constant value of 0 in block <dot>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <digit> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
+INFO:Xst:2261 - The FF/Latch <color_out_0> in Unit <dot> is equivalent to the following 3 FFs/Latches, which will be removed : <color_out_1> <color_out_2> <color_out_5> 
 WARNING:Xst:1710 - FF/Latch <seg_data_7> (without init value) has a constant value of 1 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <mosi_shr_15> (without init value) has a constant value of 0 in block <led_out>. This FF/Latch will be trimmed during the optimization process.
 
@@ -303,19 +418,57 @@ Optimizing unit <TopModule> ...
 
 Optimizing unit <RenderModule> ...
 
-Optimizing unit <color> ...
+Optimizing unit <timer> ...
 
-Optimizing unit <led_out> ...
+Optimizing unit <dot> ...
+
+Optimizing unit <clock> ...
 
 Optimizing unit <keyboard_interface> ...
+
+Optimizing unit <led_out> ...
+WARNING:Xst:1710 - FF/Latch <renderer/c/color_out_4> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <renderer/c/color_out_3> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <renderer/c/cl/d2r_3> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__0> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__1> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__2> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__2> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__3> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__3> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__4> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__4> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__5> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__5> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__6> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__6> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg__7> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg__7> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_0> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_1> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_2> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_2> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_3> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_3> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_4> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_4> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_5> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_5> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_6> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_6> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_7> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_7> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_8> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_8> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_9> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_9> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/clkKeyboardReg_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/clkKeyboardReg_0> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/clkKeyboardReg_1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/clkKeyboardReg_1> 
 INFO:Xst:2261 - The FF/Latch <renderer/CounterX_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_0> 
 INFO:Xst:2261 - The FF/Latch <renderer/CounterX_1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_1> 
 INFO:Xst:2261 - The FF/Latch <renderer/CounterX_2> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_2> 
 INFO:Xst:2261 - The FF/Latch <renderer/CounterX_3> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <_i000001/cntr_3> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/color_out_5> in Unit <TopModule> is equivalent to the following 3 FFs/Latches, which will be removed : <renderer/c/color_out_2> <renderer/c/color_out_1> <renderer/c/color_out_0> 
+INFO:Xst:2261 - The FF/Latch <renderer/c/cl/kbInt/keyShrReg_10> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <keyboard_module/keyShrReg_10> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 5.
+FlipFlop renderer/CounterX_10 has been replicated 1 time(s)
+FlipFlop renderer/CounterX_2 has been replicated 2 time(s)
+FlipFlop renderer/CounterX_3 has been replicated 1 time(s)
+FlipFlop renderer/CounterX_4 has been replicated 2 time(s)
+FlipFlop renderer/CounterX_5 has been replicated 2 time(s)
+FlipFlop renderer/CounterX_6 has been replicated 2 time(s)
+FlipFlop renderer/CounterX_7 has been replicated 1 time(s)
+FlipFlop renderer/CounterX_8 has been replicated 1 time(s)
+FlipFlop renderer/CounterX_9 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -323,8 +476,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 84
- Flip-Flops                                            : 84
+# Registers                                            : 138
+ Flip-Flops                                            : 138
 
 =========================================================================
 
@@ -347,23 +500,22 @@ Top Level Output File Name         : TopModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 209
+# BELS                             : 409
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 34
-#      LUT2                        : 4
-#      LUT3                        : 16
-#      LUT4                        : 11
-#      LUT5                        : 10
-#      LUT6                        : 62
-#      MUXCY                       : 34
+#      INV                         : 5
+#      LUT1                        : 59
+#      LUT2                        : 9
+#      LUT3                        : 47
+#      LUT4                        : 22
+#      LUT5                        : 34
+#      LUT6                        : 113
+#      MUXCY                       : 59
 #      VCC                         : 1
-#      XORCY                       : 33
-# FlipFlops/Latches                : 84
-#      FD                          : 20
-#      FDE                         : 8
-#      FDR                         : 20
-#      FDRE                        : 36
+#      XORCY                       : 59
+# FlipFlops/Latches                : 138
+#      FD                          : 49
+#      FDR                         : 49
+#      FDRE                        : 40
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
@@ -377,23 +529,23 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              84  out of  11440     0%  
- Number of Slice LUTs:                  140  out of   5720     2%  
-    Number used as Logic:               140  out of   5720     2%  
+ Number of Slice Registers:             138  out of  11440     1%  
+ Number of Slice LUTs:                  289  out of   5720     5%  
+    Number used as Logic:               289  out of   5720     5%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    156
-   Number with an unused Flip Flop:      72  out of    156    46%  
-   Number with an unused LUT:            16  out of    156    10%  
-   Number of fully used LUT-FF pairs:    68  out of    156    43%  
-   Number of unique control sets:         8
+ Number of LUT Flip Flop pairs used:    310
+   Number with an unused Flip Flop:     172  out of    310    55%  
+   Number with an unused LUT:            21  out of    310     6%  
+   Number of fully used LUT-FF pairs:   117  out of    310    37%  
+   Number of unique control sets:         9
 
 IO Utilization: 
  Number of IOs:                          16
  Number of bonded IOBs:                  16  out of    102    15%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -416,7 +568,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_in                             | BUFGP                  | 84    |
+clk_in                             | BUFGP                  | 138   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -427,9 +579,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 5.674ns (Maximum Frequency: 176.243MHz)
-   Minimum input arrival time before clock: 5.355ns
-   Maximum output required time after clock: 7.302ns
+   Minimum period: 6.825ns (Maximum Frequency: 146.520MHz)
+   Minimum input arrival time before clock: 7.218ns
+   Maximum output required time after clock: 7.495ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -438,54 +590,56 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_in'
-  Clock period: 5.674ns (frequency: 176.243MHz)
-  Total number of paths / destination ports: 1600 / 142
+  Clock period: 6.825ns (frequency: 146.520MHz)
+  Total number of paths / destination ports: 5033 / 225
 -------------------------------------------------------------------------
-Delay:               5.674ns (Levels of Logic = 4)
-  Source:            renderer/CounterX_7 (FF)
-  Destination:       renderer/c/color1_1 (FF)
+Delay:               6.825ns (Levels of Logic = 5)
+  Source:            renderer/c/cl/cnt_20 (FF)
+  Destination:       renderer/c/cl/d4r_3 (FF)
   Source Clock:      clk_in rising
   Destination Clock: clk_in rising
 
-  Data Path: renderer/CounterX_7 to renderer/c/color1_1
+  Data Path: renderer/c/cl/cnt_20 to renderer/c/cl/d4r_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              12   0.525   1.499  renderer/CounterX_7 (renderer/CounterX_7)
-     LUT6:I1->O            1   0.254   0.682  renderer/c/x[10]_GND_3_o_LessThan_7_o11 (renderer/c/x[10]_GND_3_o_LessThan_7_o1)
-     LUT6:I5->O            3   0.254   1.196  renderer/c/x[10]_GND_3_o_LessThan_7_o12 (renderer/c/x[10]_GND_3_o_LessThan_7_o)
-     LUT6:I1->O            1   0.254   0.682  renderer/c/Mmux_PWR_3_o_GND_3_o_mux_14_OUT11 (renderer/c/PWR_3_o_GND_3_o_mux_14_OUT<0>)
-     LUT2:I1->O            1   0.254   0.000  renderer/c/color1_0_glue_set (renderer/c/color1_0_glue_set)
-     FDR:D                     0.074          renderer/c/color1_0
+     FDR:C->Q              2   0.525   1.181  renderer/c/cl/cnt_20 (renderer/c/cl/cnt_20)
+     LUT6:I0->O            1   0.254   0.958  renderer/c/cl/ce<25>1 (renderer/c/cl/ce<25>)
+     LUT6:I2->O            8   0.254   0.944  renderer/c/cl/ce<25>5 (renderer/c/cl/ce)
+     LUT6:I5->O           12   0.254   1.069  renderer/c/cl/GND_4_o_rstr_OR_49_o1 (renderer/c/cl/GND_4_o_rstr_OR_49_o1)
+     LUT6:I5->O            4   0.254   0.804  renderer/c/cl/GND_4_o_rstr_OR_49_o (renderer/c/cl/GND_4_o_rstr_OR_49_o)
+     LUT5:I4->O            1   0.254   0.000  renderer/c/cl/d4r_3_rstpot (renderer/c/cl/d4r_3_rstpot)
+     FD:D                      0.074          renderer/c/cl/d4r_3
     ----------------------------------------
-    Total                      5.674ns (1.615ns logic, 4.059ns route)
-                                       (28.5% logic, 71.5% route)
+    Total                      6.825ns (1.869ns logic, 4.956ns route)
+                                       (27.4% logic, 72.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
-  Total number of paths / destination ports: 65 / 65
+  Total number of paths / destination ports: 119 / 119
 -------------------------------------------------------------------------
-Offset:              5.355ns (Levels of Logic = 2)
+Offset:              7.218ns (Levels of Logic = 3)
   Source:            rst (PAD)
-  Destination:       renderer/CounterY_9 (FF)
+  Destination:       renderer/c/cl/cnt_25 (FF)
   Destination Clock: clk_in rising
 
-  Data Path: rst to renderer/CounterY_9
+  Data Path: rst to renderer/c/cl/cnt_25
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            54   1.328   2.307  rst_IBUF (rst_IBUF)
-     LUT6:I0->O           10   0.254   1.007  renderer/rst_CounterYmaxed_OR_33_o1 (renderer/rst_CounterYmaxed_OR_33_o)
-     FDRE:R                    0.459          renderer/CounterY_0
+     IBUF:I->O            65   1.328   2.392  rst_IBUF (rst_IBUF)
+     LUT6:I0->O           10   0.254   1.116  renderer/c/cl/rstr (renderer/c/cl/rstr)
+     LUT2:I0->O           26   0.250   1.419  renderer/c/cl/ce_rstr_OR_45_o1 (renderer/c/cl/ce_rstr_OR_45_o)
+     FDR:R                     0.459          renderer/c/cl/cnt_0
     ----------------------------------------
-    Total                      5.355ns (2.041ns logic, 3.314ns route)
-                                       (38.1% logic, 61.9% route)
+    Total                      7.218ns (2.291ns logic, 4.927ns route)
+                                       (31.7% logic, 68.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
-  Total number of paths / destination ports: 92 / 11
+  Total number of paths / destination ports: 64 / 9
 -------------------------------------------------------------------------
-Offset:              7.302ns (Levels of Logic = 3)
+Offset:              7.495ns (Levels of Logic = 3)
   Source:            renderer/CounterX_10 (FF)
   Destination:       aio_out<10> (PAD)
   Source Clock:      clk_in rising
@@ -494,13 +648,13 @@ Offset:              7.302ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              12   0.525   1.524  renderer/CounterX_10 (renderer/CounterX_10)
-     LUT6:I0->O            6   0.254   1.152  renderer/CounterX[10]_CounterY[9]_AND_3_o1 (renderer/CounterX[10]_CounterY[9]_AND_3_o1)
-     LUT4:I0->O            1   0.254   0.681  renderer/Mmux_VGA_out<5:0>11 (aio_out_5_OBUF)
-     OBUF:I->O                 2.912          aio_out_5_OBUF (aio_out<5>)
+     FD:C->Q              22   0.525   1.789  renderer/CounterX_10 (renderer/CounterX_10)
+     LUT6:I0->O            1   0.254   0.958  renderer/CounterX[10]_CounterY[9]_AND_67_o1 (renderer/CounterX[10]_CounterY[9]_AND_67_o1)
+     LUT4:I0->O            4   0.254   0.803  renderer/Mmux_VGA_out<5:0>11 (aio_out_10_OBUF)
+     OBUF:I->O                 2.912          aio_out_10_OBUF (aio_out<10>)
     ----------------------------------------
-    Total                      7.302ns (3.945ns logic, 3.357ns route)
-                                       (54.0% logic, 46.0% route)
+    Total                      7.495ns (3.945ns logic, 3.550ns route)
+                                       (52.6% logic, 47.4% route)
 
 =========================================================================
 
@@ -512,20 +666,20 @@ Clock to Setup on destination clock clk_in
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_in         |    5.674|         |         |         |
+clk_in         |    6.825|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.77 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.94 secs
  
 --> 
 
-Total memory usage is 259084 kilobytes
+Total memory usage is 195336 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   10 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :   39 (   0 filtered)
 

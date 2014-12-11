@@ -31,10 +31,10 @@ module TopModule(
   output        InViewableArea
  */
   RenderModule renderer(
-    //.Pixel_Bus( 8'b00000000 ),
-    //.Pixel_Bus_Enable( 1'b0 ),
     .clk( clk_in ),
     .rst( rst ),
+    .kbClk( aio_in[13] ),
+    .kbData( aio_in[14] ),
     
     .VGA_out( aio_out )
   );
