@@ -25,25 +25,25 @@ module keyboard_interface(
     if( rst )
       clkKeyboardReg <= 0;
     else 
-      clkKeyboardReg <= {clkKeyboardReg, clkKeyboard};
+      clkKeyboardReg <= {clkKeyboardReg[0], clkKeyboard};
   end
 
   reg [10:0] keyShrReg;
   always@ ( posedge clk )
   begin
     if( rst )
-      keyShrReg <= 0;
+      keyShrReg <= 11'b11111111111;
     else if ( negedgeKeyClkReg )
-      keyShrReg <= { keyShrReg, data };
+      keyShrReg <= {  data, keyShrReg[10:1]};
   end
   
 wire isValid_wire;
-  assign isValid_wire = ( keyShrReg[9:1] & ~keyShrReg[0] & keyShrReg[10] );
+  assign isValid_wire = ( (^keyShrReg[9:1]) & (keyShrReg[10]) & ~keyShrReg[0] );
 
   always @(posedge clk)
   begin
   if( isValid_wire ) 
-  keyShrReg_<=keyShrReg[9:2];
+  keyShrReg_<=keyShrReg[8:1];
   else
 	keyShrReg_<=0;
   end

@@ -45,7 +45,7 @@ keyboard_interface kbInt(.clk(clk), .rst(rst), .clkKeyboard(kbClk), .data(kbData
 
 reg [3:0] dig;
 
-assign rstr=(key==8'h96 | rst);
+assign rstr=(key==8'h5a | rst);
 
 always @(posedge clk)
 begin
